@@ -26,7 +26,7 @@ For exhaustive technical details, please consult our specialized documentation g
 
 | Document | Description |
 | :--- | :--- |
-| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN (P2/P3/P4), Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
+| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN ($\text{P}_2/\text{P}_3/\text{P}_4$), Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
 | ☁️ [**Kaggle Dual-GPU Guide**](docs/KAGGLE_DUAL_GPU_GUIDE.md) | DistributedDataParallel (DDP) on Dual Tesla T4 GPUs, CLI `--accelerator NvidiaTeslaT4`, auto-downloading Google Drive |
 | 🚀 [**Getting Started & Setup**](docs/GETTING_STARTED.md) | Local (PowerShell/Linux/macOS), WSL2 Ubuntu, Docker containerization, dataset preprocessing, and inference |
 | 📊 [**Benchmarks & Ablations**](docs/BENCHMARKS_AND_EVALUATION.md) | Quantitative comparison (Model 1 vs 2 vs 3), environmental domain robustness, latency analysis |
@@ -40,7 +40,7 @@ For exhaustive technical details, please consult our specialized documentation g
    - Initialized with calibrated Kaiming-He normal distribution ($\mathcal{N}(0, \sqrt{2/\text{fan\_in}})$).
 2. **Small-Target Scale Optimization ($<32\text{px}$ Targets)**:
    - Physical dataset analysis reveals **$95.42\%$ of drone bounding boxes are $< 32\times 32$ pixels** ($51.52\%$ are $< 16\times 16$ pixels).
-   - Our **High-Resolution Feature Pyramid Network (HR-FPN)** retains **P2 (stride 4, $160\times 160$)**, **P3 (stride 8, $80\times 80$)**, and **P4 (stride 16, $40\times 40$)** representations, preventing microscopic spatial feature collapse.
+   - Our **High-Resolution Feature Pyramid Network (HR-FPN)** retains **$\text{P}_2$ (stride 4, $160\times 160$)**, **$\text{P}_3$ (stride 8, $80\times 80$)**, and **$\text{P}_4$ (stride 16, $40\times 40$)** representations, preventing microscopic spatial feature collapse.
 3. **Receptive Field Blocks (RFB) & Coordinate Attention (CA)**:
    - Dilated convolution branches ($r \in \{1, 2, 3\}$) expand multi-scale receptive context without spatial downsampling.
    - Directional Coordinate Attention decomposes 2D pooling into horizontal ($X$) and vertical ($Y$) positional encodings, filtering dense fog haze and isolating specular rotor reflections.
@@ -62,8 +62,8 @@ Evaluated on the independent validation partition (360 multi-environment frames,
 
 | Model Label | Architecture | Params | FLOPs | Best Val AP@0.50 | Precision | Recall | FPS |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Model 1** | Vanilla Base CNN (Single-Scale P3) | 1.17M | 12.8G | 88.02% | 94.72% | 89.20% | **180.2** |
-| **Model 2** | DroneNet-FPN (Multi-Scale P2/P3/P4) | 3.87M | 21.6G | 92.80% | 96.77% | 93.61% | 73.6 |
+| **Model 1** | Vanilla Base CNN (Single-Scale $\text{P}_3$) | 1.17M | 12.8G | 88.02% | 94.72% | 89.20% | **180.2** |
+| **Model 2** | DroneNet-FPN (Multi-Scale $\text{P}_2/\text{P}_3/\text{P}_4$) | 3.87M | 21.6G | 92.80% | 96.77% | 93.61% | 73.6 |
 | **Model 3** 🏆 | **DroneNet-FPN-Attention (BEST MODEL)** | **4.12M** | **24.8G** | **92.38%** | **97.01%** | **93.04%** | **68.8** |
 
 > **🏆 Best Model Confirmation:** **Model 3 (`DroneNet-FPN-Attention`)** achieves the highest precision (**$97.01\%$ Precision**, **$93.04\%$ Recall**) with an exceptional real-time throughput of **68.8 FPS** on NVIDIA T4 GPUs.
