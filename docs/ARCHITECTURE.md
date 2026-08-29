@@ -27,7 +27,7 @@ Analysis of the 2,400 curated frames (4,800 drone instances) reveals:
 ### 1.2 Atmospheric Optical Degradation
 Atmospheric scattering follows Koschmieder's Law:
 $$
-I(x) = J(x)e^{-\beta d(x)} + A\left(1 - e^{-\beta d(x)}ight)
+I(x) = J(x)e^{-\beta d(x)} + A\left(1 - e^{-\beta d(x)}\right)
 $$
 where $J(x)$ is scene radiance, $\beta$ is the atmospheric extinction coefficient, $d(x)$ is target distance, and $A$ is atmospheric airlight. Dense fog attenuates high-frequency rotor and fuselage edges into the background.
 
@@ -118,7 +118,7 @@ $$
 2. The intermediate tensor $\mathbf{f} \in \mathbb{R}^{C/r \times (H+W)}$ is split back into $\mathbf{f}^h \in \mathbb{R}^{C/r \times H}$ and $\mathbf{f}^w \in \mathbb{R}^{C/r \times W}$.
 3. Two independent $1 \times 1$ convolutions and sigmoid ($\sigma$) activations generate coordinate attention weight maps:
    $$
-   \mathbf{g}^h = \sigma\left(\text{Conv}_h(\mathbf{f}^h)ight), \quad \mathbf{g}^w = \sigma\left(\text{Conv}_w(\mathbf{f}^w)ight)
+   \mathbf{g}^h = \sigma\left(\text{Conv}_h(\mathbf{f}^h)\right), \quad \mathbf{g}^w = \sigma\left(\text{Conv}_w(\mathbf{f}^w)\right)
    $$
 4. The output feature representation is reweighted along both orthogonal directions:
    $$
