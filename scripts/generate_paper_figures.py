@@ -88,7 +88,10 @@ def parse_log(path):
         for line in f:
             m = re.search(r'\[Epoch (\d+)/\d+\] Train Loss: ([\d\.]+) \| Val AP@0.5: ([\d\.]+)% \| Val mAP@0.5:0.95: ([\d\.]+)% \| Precision: ([\d\.]+)% \| Recall: ([\d\.]+)%', line)
             if m:
-                epochs.append(int(m.group(1)))
+                ep = int(m.group(1))
+                if ep == 1 or (epochs and ep <= epochs[-1]):
+                    epochs, losses, aps, precs, recs = [], [], [], [], []
+                epochs.append(ep)
                 losses.append(float(m.group(2)))
                 aps.append(float(m.group(3)))
                 precs.append(float(m.group(5)))
