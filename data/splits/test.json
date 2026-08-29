@@ -1,0 +1,1430 @@
+[
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.102_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.102_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.105_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.105_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.116_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.116_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.217_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.217_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.229_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.229_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.249_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.249_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.327_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.327_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.398_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.398_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.449_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.449_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.474_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.474_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.570_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.570_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.654_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.654_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.677_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.677_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.790_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.790_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.815_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.815_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.877_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.877_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.900_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_6_7_sequence.900_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.164_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.164_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.234_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.234_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.263_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.263_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.287_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.287_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.299_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.299_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.327_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.327_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.344_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.344_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.388_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.388_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.446_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.446_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.471_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.471_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.498_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.498_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.4_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.4_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.555_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.555_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.56_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.56_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.572_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.572_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.573_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.573_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.577_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.577_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.597_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.597_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.599_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.599_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.627_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.627_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.62_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.62_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.654_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.654_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.657_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.657_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.707_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.707_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.873_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.873_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.884_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.884_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.147_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.147_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.190_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.190_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.29_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.29_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.383_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.383_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.460_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.460_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.498_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.498_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.4_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.4_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.552_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.552_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.599_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.599_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.601_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.601_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.604_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.604_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.6_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.6_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.75_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.75_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.764_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.764_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.775_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.775_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.826_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_foggy_city_foggy_14_15_sequence.826_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.10_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.10_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.173_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.173_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.204_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.204_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.214_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.214_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.270_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.270_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.318_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.318_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.384_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.384_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.491_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.491_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.496_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.496_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.560_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.560_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.562_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.562_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.565_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.565_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.599_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.599_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.607_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.607_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.785_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.785_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.893_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_8_9_sequence.893_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.153_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.153_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.159_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.159_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.174_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.174_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.183_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.183_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.253_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.253_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.324_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.324_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.330_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.330_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.342_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.342_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.355_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.355_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.356_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.356_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.370_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.370_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.447_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.447_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.448_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.448_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.478_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.478_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.504_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.504_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.566_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.566_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.608_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.608_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.624_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.624_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.648_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.648_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.682_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.682_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.6_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.6_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.754_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.754_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.783_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.783_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.820_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.820_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.875_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.875_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.879_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_city_sunny_city_sunny_2_3_sequence.879_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.111_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.111_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.122_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.122_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.123_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.123_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.180_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.180_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.209_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.209_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.225_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.225_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.232_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.232_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.285_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.285_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.293_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.293_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.370_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.370_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.407_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.407_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.487_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.487_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.490_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.490_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.570_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.570_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.590_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.590_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.593_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.593_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.621_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.621_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.693_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.693_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.704_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.704_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.760_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.760_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.808_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.808_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.871_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.871_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.899_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_city_sunny_city_sunny_4_5_sequence.899_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.105_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.105_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.204_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.204_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.228_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.228_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.275_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.275_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.284_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.284_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.285_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.285_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.2_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.2_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.32_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.32_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.367_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.367_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.379_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.379_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.38_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.38_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.3_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.3_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.473_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.473_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.487_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.487_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.562_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.562_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.584_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.584_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.595_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.595_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.641_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.641_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.683_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.683_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.750_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.750_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.806_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.806_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.852_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.852_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.873_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.873_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.884_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.884_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.895_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.895_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.89_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_6_7_sequence.89_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.126_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.126_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.170_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.170_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.175_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.175_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.182_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.182_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.186_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.186_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.18_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.18_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.270_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.270_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.363_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.363_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.382_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.382_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.423_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.423_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.446_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.446_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.527_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.527_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.542_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.542_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.548_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.548_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.623_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.623_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.788_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.788_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.814_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.814_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.884_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_forest_foggy_forest_foggy_10_11_sequence.884_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.180_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.180_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.233_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.233_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.304_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.304_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.358_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.358_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.373_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.373_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.445_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.445_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.543_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.543_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.550_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.550_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.554_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.554_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.574_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.574_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.654_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.654_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.663_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.663_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.691_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.691_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.70_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.70_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.747_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.747_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.98_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_foggy_forest_foggy_14_15_sequence.98_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.141_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.141_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.182_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.182_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.221_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.221_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.250_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.250_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.260_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.260_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.322_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.322_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.38_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.38_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.402_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.402_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.411_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.411_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.497_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.497_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.515_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.515_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.520_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.520_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.532_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.532_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.625_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.625_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.631_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.631_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.686_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.686_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.759_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.759_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.766_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_4_5_sequence.766_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.118_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.118_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.151_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.151_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.170_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.170_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.174_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.174_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.198_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.198_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.205_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.205_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.20_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.20_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.217_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.217_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.233_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.233_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.355_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.355_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.380_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.380_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.571_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.571_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.595_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.595_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.698_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.698_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.72_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.72_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.80_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.80_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.817_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.817_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.827_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.827_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.857_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.857_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.882_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.882_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.888_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_10_11_sequence.888_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.116_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.116_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.196_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.196_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.211_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.211_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.244_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.244_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.305_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.305_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.307_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.307_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.310_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.310_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.313_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.313_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.376_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.376_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.381_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.381_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.387_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.387_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.414_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.414_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.541_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.541_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.548_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.548_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.651_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.651_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.705_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.705_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.736_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.736_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.755_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.755_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.771_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.771_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.850_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_forest_sunny_forest_sunny_12_13_sequence.850_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.110_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.110_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.166_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.166_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.224_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.224_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.279_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.279_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.311_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.311_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.37_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.37_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.384_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.384_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.393_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.393_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.476_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.476_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.497_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.497_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.541_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.541_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.562_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.562_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.631_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.631_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.718_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.718_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.736_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.736_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.743_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.743_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.789_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.789_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.814_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.814_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.856_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_4_5_sequence.856_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.181_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.181_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.236_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.236_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.256_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.256_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.283_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.283_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.311_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.311_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.326_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.326_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.389_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.389_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.406_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.406_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.429_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.429_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.44_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.44_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.454_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.454_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.46_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.46_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.525_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.525_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.538_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.538_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.566_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.566_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.712_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.712_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.716_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.716_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.735_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.735_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.759_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.759_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.871_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.871_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.874_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_foggy_lake_foggy_18_19_sequence.874_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.105_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.105_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.155_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.155_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.186_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.186_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.242_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.242_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.293_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.293_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.378_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.378_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.459_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.459_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.477_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.477_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.53_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.53_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.661_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.661_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.767_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.767_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.794_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_foggy_lake_foggy_8_9_sequence.794_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.128_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.128_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.149_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.149_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.175_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.175_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.356_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.356_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.40_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.40_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.470_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.470_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.522_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.522_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.599_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.599_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.627_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.627_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.650_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.650_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.675_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.675_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.728_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.728_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.76_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.76_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.776_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.776_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.77_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.77_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.819_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.819_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.850_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.850_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.883_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.883_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.899_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_0_1_sequence.899_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.101_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.101_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.112_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.112_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.201_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.201_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.289_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.289_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.35_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.35_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.374_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.374_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.376_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.376_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.380_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.380_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.442_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.442_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.458_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.458_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.531_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.531_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.556_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.556_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.559_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.559_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.566_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.566_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.592_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.592_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.701_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.701_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.727_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.727_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.813_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.813_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.820_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.820_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.853_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.853_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.86_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.86_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.887_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.887_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.891_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.891_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.900_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\raw_dataset_lake_sunny_lake_sunny_6_7_sequence.900_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.102_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.102_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.110_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.110_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.18_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.18_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.19_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.19_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.207_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.207_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.236_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.236_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.524_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.524_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.585_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.585_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.597_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.597_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.601_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.601_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.654_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.654_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.7_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.7_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.802_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.802_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.805_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.805_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.825_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.825_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.854_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.854_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.866_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.866_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.873_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.873_step0.camera.txt"
+  },
+  {
+    "image": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.889_step0.camera.png",
+    "label": "C:\\Users\\ghiff\\projects\\islab-pusan-ai-assignment\\curated_datasets\\obj_det_base\\augmented_raw_dataset_lake_sunny_lake_sunny_2_3_sequence.889_step0.camera.txt"
+  }
+]

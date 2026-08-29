@@ -1,0 +1,546 @@
+"""
+Build Clean Kaggle and Colab Training Notebooks via GitHub Repository Integration.
+Generates:
+1. notebooks/kaggle_training.ipynb (Tailored for Kaggle environment and Dual T4 GPUs)
+2. notebooks/colab_training.ipynb  (Tailored for Google Colab with Google Drive sync)
+"""
+
+import os
+import json
+
+def build_notebooks():
+    REPO_URL = "https://github.com/itanium-g/islab-pusan-ai-assignment.git"
+
+    # =========================================================================
+    # 1. BUILD KAGGLE NOTEBOOK
+    # =========================================================================
+    kaggle_nb = {
+        'cells': [
+            {
+                'cell_type': 'markdown',
+                'metadata': {},
+                'source': [
+                    '# 🛸 DroneNet-FPN-Attention: Kaggle Dual-GPU DDP Training Pipeline\n',
+                    '### ISLab Pusan National University — AI Engineer / Researcher Assignment\n',
+                    '**Author:** Ghiffari Ahmadijaya (`ghiffariahmadijaya@gmail.com`)\n\n',
+                    '**Key Capabilities:**\n',
+                    '- 🚀 **Multi-GPU DistributedDataParallel (DDP)** on Dual Tesla T4 GPUs\n',
+                    '- 🔍 **100% From-Scratch Vanilla Architecture** (Zero Pretrained Weights)\n',
+                    '- 🎯 **High-Resolution FPN (P2/P3/P4) + RFB + Coordinate Attention**\n',
+                    '- 📥 **Auto-Download Google Drive Dataset** (No Local Upload Needed)\n',
+                    '- ⚡ **High-Speed Pre-Caching** (~3s/epoch training speed)\n',
+                    '- 📊 **Full Evaluation & IEEE Paper Compilation in Cloud**'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 1. Setup Environment & Check GPUs\n',
+                    'import os, sys\n',
+                    'os.environ["PYDEVD_DISABLE_FILE_VALIDATION"] = "1"\n',
+                    'os.environ["PYTHONWARNINGS"] = "ignore"\n',
+                    'import torch\n',
+                    '\n',
+                    '!nvidia-smi\n',
+                    'print(f"Python Version : {sys.version.split()[0]}")\n',
+                    'print(f"PyTorch Version: {torch.__version__}")\n',
+                    'print(f"CUDA Available : {torch.cuda.is_available()}")\n',
+                    'num_gpus = torch.cuda.device_count()\n',
+                    'print(f"Device Count   : {num_gpus}")\n',
+                    'for i in range(num_gpus):\n',
+                    '    print(f"  GPU {i}: {torch.cuda.get_device_name(i)}")'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 2. Install Dependencies Quietly\n',
+                    '!pip install -q --no-cache-dir gdown tabulate pyyaml wandb tensorboard reportlab pypdf onnx onnxruntime onnxscript'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 3. Clone Repository from GitHub into Working Directory\n',
+                    'import os, shutil\n',
+                    'os.chdir("/kaggle/working")\n',
+                    'if not os.path.exists("src"):\n',
+                    f'    print("Cloning codebase from GitHub: {REPO_URL}...")\n',
+                    f'    !git clone {REPO_URL} /tmp/repo\n',
+                    '    !cp -r /tmp/repo/* .\n',
+                    '    !cp -r /tmp/repo/.* . 2>/dev/null || true\n',
+                    '    !rm -rf /tmp/repo\n',
+                    'print("Codebase initialized successfully.")\n',
+                    'print("Directory contents:", os.listdir("/kaggle/working"))'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 4. Download and Extract Dataset to /tmp to Keep /kaggle/working Clean\n',
+                    'import os, zipfile, shutil, glob, gdown\n',
+                    'GDRIVE_ID = "19L9yUP62xMESJMw6srf5HGcL8s5b0gv8"\n',
+                    'TMP_DATA_DIR = "/tmp/curated_datasets/obj_det_base"\n',
+                    'os.makedirs(TMP_DATA_DIR, exist_ok=True)\n',
+                    '\n',
+                    'existing_txts = glob.glob(f"{TMP_DATA_DIR}/*.txt")\n',
+                    'if len(existing_txts) < 100:\n',
+                    '    print("Downloading dataset from Google Drive...")\n',
+                    '    gdown.download(id=GDRIVE_ID, output="/tmp/dataset.zip", quiet=False)\n',
+                    '    print("Extracting dataset.zip...")\n',
+                    '    with zipfile.ZipFile("/tmp/dataset.zip", "r") as zf:\n',
+                    '        zf.extractall("/tmp/extracted")\n',
+                    '    if os.path.exists("/tmp/dataset.zip"):\n',
+                    '        os.remove("/tmp/dataset.zip")\n',
+                    '    # Move extracted files to TMP_DATA_DIR\n',
+                    '    for root, dirs, files in os.walk("/tmp/extracted"):\n',
+                    '        if any(f.endswith(".txt") for f in files):\n',
+                    '            for f in files:\n',
+                    '                src_p = os.path.join(root, f)\n',
+                    '                dst_p = os.path.join(TMP_DATA_DIR, f)\n',
+                    '                if not os.path.exists(dst_p):\n',
+                    '                    shutil.move(src_p, dst_p)\n',
+                    '            break\n',
+                    '    if os.path.exists("/tmp/extracted"):\n',
+                    '        shutil.rmtree("/tmp/extracted")\n',
+                    '\n',
+                    'total_files = len(glob.glob(f"{TMP_DATA_DIR}/*.txt"))\n',
+                    'print(f"Verified dataset: {total_files} annotation files in {TMP_DATA_DIR}")\n',
+                    '\n',
+                    '# Create symlink in working directory for seamless path access\n',
+                    'os.makedirs("curated_datasets", exist_ok=True)\n',
+                    'if not os.path.exists("curated_datasets/obj_det_base"):\n',
+                    '    os.symlink(TMP_DATA_DIR, "curated_datasets/obj_det_base")\n',
+                    'print("Symlinked curated_datasets/obj_det_base ->", TMP_DATA_DIR)'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 5. Preprocess & Cache Dataset (Reduces Epoch Time from 3 min to 3s!)\n',
+                    '!python scripts/split_dataset.py --dataset-dir curated_datasets/obj_det_base --output-dir data/splits\n',
+                    '!python scripts/preprocess_dataset.py --src-dir curated_datasets/obj_det_base --dest-dir data/cached_640 --img-size 640 --workers 8'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 6. Train Model 3 (DroneNet-FPN-Attention - BEST MODEL) with Multi-GPU DDP Engine\n',
+                    'import torch\n',
+                    'num_gpus = torch.cuda.device_count()\n',
+                    'if num_gpus > 1:\n',
+                    '    print(f"Launching Multi-GPU DDP Training across {num_gpus} GPUs...")\n',
+                    '    !torchrun --nproc_per_node={num_gpus} train.py --config configs/model3_fpn_attn.yaml --epochs 40 --batch-size 16 --ddp\n',
+                    'elif num_gpus == 1:\n',
+                    '    gpu_name = torch.cuda.get_device_name(0)\n',
+                    '    print(f"Launching Training on Single GPU ({gpu_name}) with AMP...")\n',
+                    '    !python train.py --config configs/model3_fpn_attn.yaml --epochs 40 --batch-size 16\n',
+                    'else:\n',
+                    '    print("Training on CPU...")\n',
+                    '    !python train.py --config configs/model3_fpn_attn.yaml --epochs 5 --batch-size 8'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 7. Train Baseline Model (Model 1) & Multi-Scale FPN (Model 2) for Ablation Benchmark\n',
+                    '!python train.py --config configs/model1_baseline.yaml --epochs 30 --batch-size 16\n',
+                    '!python train.py --config configs/model2_fpn.yaml --epochs 35 --batch-size 16'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 8. Comprehensive Benchmark Evaluation on Test Set across All 3 Models\n',
+                    'print("=== EVALUATING MODEL 1 (BASELINE) ===")\n',
+                    '!python evaluate.py --config configs/model1_baseline.yaml --weights runs/train/model1_vanilla_baseline/checkpoints/best_model.pth --split test\n',
+                    '\n',
+                    'print("\\n=== EVALUATING MODEL 2 (MULTI-SCALE FPN) ===")\n',
+                    '!python evaluate.py --config configs/model2_fpn.yaml --weights runs/train/model2_fpn_multiscale/checkpoints/best_model.pth --split test\n',
+                    '\n',
+                    'print("\\n=== EVALUATING MODEL 3 (FPN + ATTENTION - BEST MODEL) ===")\n',
+                    '!python evaluate.py --config configs/model3_fpn_attn.yaml --weights runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --split test'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 9. Export Lightweight Stripped Weights (< 15 MB), TorchScript & ONNX Models\n',
+                    'os.makedirs("/kaggle/working/weights", exist_ok=True)\n',
+                    '!python scripts/export_weights.py --config configs/model3_fpn_attn.yaml --checkpoint runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --output-dir /kaggle/working/weights'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 10. Generate Paper Figures and Compile IEEE PDF in Cloud\n',
+                    '!python scripts/generate_paper_figures.py\n',
+                    '!python scripts/compile_paper.py\n',
+                    '!cp paper/paper.pdf /kaggle/working/Drone_Detection_Paper.pdf\n',
+                    'print("Paper PDF saved to: /kaggle/working/Drone_Detection_Paper.pdf")'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 11. Visual Inference & Sample Renders\n',
+                    'import glob, os, shutil\n',
+                    'from PIL import Image\n',
+                    'import matplotlib.pyplot as plt\n',
+                    '\n',
+                    'os.makedirs("/kaggle/working/inference_renders", exist_ok=True)\n',
+                    '!python infer.py --config configs/model3_fpn_attn.yaml --weights runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --source data/cached_640/images --output-dir /kaggle/working/inference_renders\n',
+                    '\n',
+                    'sample_renders = glob.glob("/kaggle/working/inference_renders/*.jpg")[:3]\n',
+                    'for p in sample_renders:\n',
+                    '    plt.figure(figsize=(10, 6))\n',
+                    '    plt.imshow(Image.open(p))\n',
+                    '    plt.title(f"Detection Output: {os.path.basename(p)}")\n',
+                    '    plt.axis("off")\n',
+                    '    plt.show()'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 12. Final Cleanup of Heavy Temporary Cache to Keep Output Package Lightweight (< 20 MB)\n',
+                    'import os, shutil\n',
+                    'if os.path.islink("curated_datasets/obj_det_base"):\n',
+                    '    os.unlink("curated_datasets/obj_det_base")\n',
+                    'if os.path.exists("data/cached_640"):\n',
+                    '    shutil.rmtree("data/cached_640")\n',
+                    'print("Kaggle working directory output files:")\n',
+                    'for root, dirs, files in os.walk("/kaggle/working"):\n',
+                    '    for f in files:\n',
+                    '        p = os.path.join(root, f)\n',
+                    '        sz = os.path.getsize(p) / (1024 * 1024)\n',
+                    '        if not any(x in root for x in ["__pycache__", ".git"]):\n',
+                    '            print(f"  {p} ({sz:.2f} MB)")'
+                ]
+            }
+        ],
+        'metadata': {
+            'accelerator': 'GPU',
+            'kernelspec': {
+                'display_name': 'Python 3',
+                'language': 'python',
+                'name': 'python3'
+            },
+            'language_info': {
+                'name': 'python',
+                'version': '3.14.0'
+            }
+        },
+        'nbformat': 4,
+        'nbformat_minor': 2
+    }
+
+    with open('notebooks/kaggle_training.ipynb', 'w') as f:
+        json.dump(kaggle_nb, f, indent=1)
+    print('Generated notebooks/kaggle_training.ipynb successfully.')
+
+    # =========================================================================
+    # 2. BUILD COLAB NOTEBOOK (Exact Parity + Google Drive Mount Integration)
+    # =========================================================================
+    colab_nb = {
+        'cells': [
+            {
+                'cell_type': 'markdown',
+                'metadata': {},
+                'source': [
+                    '# 🛸 DroneNet-FPN-Attention: Google Colab Training & Interactive Demo\n',
+                    '### ISLab Pusan National University — AI Engineer / Researcher Assignment\n',
+                    '**Author:** Ghiffari Ahmadijaya (`ghiffariahmadijaya@gmail.com`)\n\n',
+                    '**Features:**\n',
+                    '- 🚀 **1-Click Google Drive Sync** (Never lose checkpoint weights on session disconnect)\n',
+                    '- 📥 **Auto-Download Google Drive Dataset** (`19L9yUP62xMESJMw6srf5HGcL8s5b0gv8`)\n',
+                    '- 🎯 **100% From-Scratch Vanilla Architecture** (Zero Pretrained Weights)\n',
+                    '- ⚡ **Automatic Mixed Precision (AMP)** for Fast Training on Free T4/A100 GPUs\n',
+                    '- 📈 **Live TensorBoard & Weights & Biases (W&B) Tracking**\n',
+                    '- 🖼️ **Interactive Real-Time Drone Detection Visualizer**\n',
+                    '- 📄 **IEEE Conference Paper Auto-Compilation**'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 1. Mount Google Drive (Optional for Checkpoint Backup) & Check GPU\n',
+                    'import os, sys, torch\n',
+                    'try:\n',
+                    '    from google.colab import drive\n',
+                    '    drive.mount("/content/drive")\n',
+                    '    DRIVE_DIR = "/content/drive/MyDrive/islab_drone_project"\n',
+                    '    os.makedirs(DRIVE_DIR, exist_ok=True)\n',
+                    '    print(f"Google Drive mounted at: {DRIVE_DIR}")\n',
+                    'except Exception as e:\n',
+                    '    print("Google Drive not mounted (running in local/standalone mode)")\n',
+                    '    DRIVE_DIR = None\n',
+                    '\n',
+                    '!nvidia-smi\n',
+                    'print(f"PyTorch Version : {torch.__version__}")\n',
+                    'print(f"CUDA Available  : {torch.cuda.is_available()}")\n',
+                    'num_gpus = torch.cuda.device_count()\n',
+                    'print(f"Device Count    : {num_gpus}")\n',
+                    'for i in range(num_gpus):\n',
+                    '    print(f"  GPU {i}: {torch.cuda.get_device_name(i)}")'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 2. Install Dependencies Quietly\n',
+                    '!pip install -q --no-cache-dir gdown tabulate pyyaml wandb tensorboard reportlab pypdf onnx onnxruntime onnxscript'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 3. Clone Repository from GitHub into /content\n',
+                    'import os, shutil\n',
+                    'os.chdir("/content")\n',
+                    'if not os.path.exists("src"):\n',
+                    f'    print("Cloning codebase from GitHub: {REPO_URL}...")\n',
+                    f'    !git clone {REPO_URL} /tmp/repo\n',
+                    '    !cp -r /tmp/repo/* .\n',
+                    '    !cp -r /tmp/repo/.* . 2>/dev/null || true\n',
+                    '    !rm -rf /tmp/repo\n',
+                    'print("Codebase initialized successfully into /content.")\n',
+                    'print("Directory contents:", os.listdir("/content"))'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 4. Download and Extract Dataset from Google Drive\n',
+                    'import os, zipfile, shutil, glob, gdown\n',
+                    'GDRIVE_ID = "19L9yUP62xMESJMw6srf5HGcL8s5b0gv8"\n',
+                    'TMP_DATA_DIR = "/tmp/curated_datasets/obj_det_base"\n',
+                    'os.makedirs(TMP_DATA_DIR, exist_ok=True)\n',
+                    '\n',
+                    'existing_txts = glob.glob(f"{TMP_DATA_DIR}/*.txt")\n',
+                    'if len(existing_txts) < 100:\n',
+                    '    print("Downloading dataset from Google Drive...")\n',
+                    '    gdown.download(id=GDRIVE_ID, output="/tmp/dataset.zip", quiet=False)\n',
+                    '    print("Extracting dataset.zip...")\n',
+                    '    with zipfile.ZipFile("/tmp/dataset.zip", "r") as zf:\n',
+                    '        zf.extractall("/tmp/extracted")\n',
+                    '    if os.path.exists("/tmp/dataset.zip"):\n',
+                    '        os.remove("/tmp/dataset.zip")\n',
+                    '    # Move extracted files to TMP_DATA_DIR\n',
+                    '    for root, dirs, files in os.walk("/tmp/extracted"):\n',
+                    '        if any(f.endswith(".txt") for f in files):\n',
+                    '            for f in files:\n',
+                    '                src_p = os.path.join(root, f)\n',
+                    '                dst_p = os.path.join(TMP_DATA_DIR, f)\n',
+                    '                if not os.path.exists(dst_p):\n',
+                    '                    shutil.move(src_p, dst_p)\n',
+                    '            break\n',
+                    '    if os.path.exists("/tmp/extracted"):\n',
+                    '        shutil.rmtree("/tmp/extracted")\n',
+                    '\n',
+                    'total_files = len(glob.glob(f"{TMP_DATA_DIR}/*.txt"))\n',
+                    'print(f"Verified dataset: {total_files} annotation files in {TMP_DATA_DIR}")\n',
+                    '\n',
+                    '# Create symlink for seamless path access\n',
+                    'os.makedirs("curated_datasets", exist_ok=True)\n',
+                    'if not os.path.exists("curated_datasets/obj_det_base"):\n',
+                    '    os.symlink(TMP_DATA_DIR, "curated_datasets/obj_det_base")\n',
+                    'print("Symlinked curated_datasets/obj_det_base ->", TMP_DATA_DIR)'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 5. Preprocess & Cache Dataset (Reduces Epoch Time from 3 min to 3s!)\n',
+                    '!python scripts/split_dataset.py --dataset-dir curated_datasets/obj_det_base --output-dir data/splits\n',
+                    '!python scripts/preprocess_dataset.py --src-dir curated_datasets/obj_det_base --dest-dir data/cached_640 --img-size 640 --workers 4'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 6. Launch Live TensorBoard Tracking\n',
+                    '%load_ext tensorboard\n',
+                    '%tensorboard --logdir runs/train'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 7. Train Proposed Best Model (Model 3: DroneNet-FPN-Attention)\n',
+                    'import torch\n',
+                    'num_gpus = torch.cuda.device_count()\n',
+                    'if num_gpus > 1:\n',
+                    '    print(f"Launching Multi-GPU DDP Training across {num_gpus} GPUs...")\n',
+                    '    !torchrun --nproc_per_node={num_gpus} train.py --config configs/model3_fpn_attn.yaml --epochs 40 --batch-size 16 --ddp\n',
+                    'elif num_gpus == 1:\n',
+                    '    gpu_name = torch.cuda.get_device_name(0)\n',
+                    '    print(f"Launching Training on GPU ({gpu_name}) with AMP...")\n',
+                    '    !python train.py --config configs/model3_fpn_attn.yaml --epochs 40 --batch-size 16\n',
+                    'else:\n',
+                    '    print("Training on CPU...")\n',
+                    '    !python train.py --config configs/model3_fpn_attn.yaml --epochs 5 --batch-size 8'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 8. Train Baseline Models (Model 1 & Model 2) for Benchmark Comparison\n',
+                    '!python train.py --config configs/model1_baseline.yaml --epochs 30 --batch-size 16\n',
+                    '!python train.py --config configs/model2_fpn.yaml --epochs 35 --batch-size 16'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 9. Evaluate All Models on Independent Test Set\n',
+                    'print("=== EVALUATING MODEL 1 (BASELINE) ===")\n',
+                    '!python evaluate.py --config configs/model1_baseline.yaml --weights runs/train/model1_vanilla_baseline/checkpoints/best_model.pth --split test\n',
+                    '\n',
+                    'print("\\n=== EVALUATING MODEL 2 (MULTI-SCALE FPN) ===")\n',
+                    '!python evaluate.py --config configs/model2_fpn.yaml --weights runs/train/model2_fpn_multiscale/checkpoints/best_model.pth --split test\n',
+                    '\n',
+                    'print("\\n=== EVALUATING MODEL 3 (FPN + ATTENTION - BEST MODEL) ===")\n',
+                    '!python evaluate.py --config configs/model3_fpn_attn.yaml --weights runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --split test'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 10. Export Lightweight Weights (< 15 MB), ONNX, and TorchScript\n',
+                    'os.makedirs("weights", exist_ok=True)\n',
+                    '!python scripts/export_weights.py --config configs/model3_fpn_attn.yaml --checkpoint runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --output-dir weights\n',
+                    '\n',
+                    '# Backup to Google Drive if mounted\n',
+                    'if DRIVE_DIR and os.path.exists(DRIVE_DIR):\n',
+                    '    !cp -r weights/* {DRIVE_DIR}/\n',
+                    '    print(f"Weights backed up to: {DRIVE_DIR}")'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 11. Generate Publication Figures & Compile IEEE Conference Paper PDF\n',
+                    '!python scripts/generate_paper_figures.py\n',
+                    '!python scripts/compile_paper.py\n',
+                    'if DRIVE_DIR and os.path.exists(DRIVE_DIR):\n',
+                    '    !cp paper/Drone_Detection_Paper.pdf {DRIVE_DIR}/\n',
+                    '    print(f"Paper PDF backed up to: {DRIVE_DIR}/Drone_Detection_Paper.pdf")'
+                ]
+            },
+            {
+                'cell_type': 'code',
+                'execution_count': None,
+                'metadata': {},
+                'outputs': [],
+                'source': [
+                    '# 12. Interactive Visual Inference & Sample Detections\n',
+                    'import glob, os\n',
+                    'from PIL import Image\n',
+                    'import matplotlib.pyplot as plt\n',
+                    '\n',
+                    'os.makedirs("runs/infer", exist_ok=True)\n',
+                    '!python infer.py --config configs/model3_fpn_attn.yaml --weights runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --source data/cached_640/images --output-dir runs/infer --conf-thresh 0.35\n',
+                    '\n',
+                    'sample_renders = glob.glob("runs/infer/*.jpg")[:4]\n',
+                    'for p in sample_renders:\n',
+                    '    plt.figure(figsize=(10, 6))\n',
+                    '    plt.imshow(Image.open(p))\n',
+                    '    plt.title(f"Colab Detection Output: {os.path.basename(p)}")\n',
+                    '    plt.axis("off")\n',
+                    '    plt.show()'
+                ]
+            }
+        ],
+        'metadata': {
+            'accelerator': 'GPU',
+            'colab': {
+                'provenance': []
+            },
+            'kernelspec': {
+                'display_name': 'Python 3',
+                'name': 'python3'
+            },
+            'language_info': {
+                'name': 'python'
+            }
+        },
+        'nbformat': 4,
+        'nbformat_minor': 0
+    }
+
+    with open('notebooks/colab_training.ipynb', 'w') as f:
+        json.dump(colab_nb, f, indent=1)
+    print('Generated notebooks/colab_training.ipynb successfully.')
+
+if __name__ == '__main__':
+    build_notebooks()

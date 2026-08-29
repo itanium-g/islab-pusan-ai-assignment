@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  train:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: drone_detector_train
+    volumes:
+      - ..:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: python train.py --config configs/model3_fpn_attn.yaml --epochs 40
+
+  evaluate:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: drone_detector_eval
+    volumes:
+      - ..:/workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: python evaluate.py --config configs/model3_fpn_attn.yaml --weights runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --split test
+
+  infer:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: drone_detector_infer
+    volumes:
+      - ..:/workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: python infer.py --config configs/model3_fpn_attn.yaml --weights runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --source data/cached_640/images --output-dir runs/inference

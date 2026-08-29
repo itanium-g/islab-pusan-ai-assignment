@@ -1,0 +1,42 @@
+# Base Configuration for Drone Detection Project
+
+experiment:
+  name: "drone_detection_base"
+  output_dir: "runs/train"
+  seed: 42
+
+dataset:
+  train_manifest: "data/splits/train.txt"
+  val_manifest: "data/splits/val.txt"
+  test_manifest: "data/splits/test.txt"
+  raw_dir: "curated_datasets/obj_det_base"
+  use_cached: true
+  cached_dir: "data/cached_640"
+  img_size: 640
+  num_classes: 1
+  class_names: ["drone"]
+  cache_in_ram: false
+
+training:
+  epochs: 40
+  batch_size: 16
+  num_workers: 4
+  learning_rate: 0.001
+  min_learning_rate: 0.00001
+  warmup_epochs: 3
+  weight_decay: 0.0005
+  optimizer: "AdamW"
+  scheduler: "cosine"
+  amp: true
+  grad_accum_steps: 1
+  loss_weights:
+    obj: 1.0
+    box: 2.5
+    cls: 0.5
+
+logging:
+  wandb: false
+  wandb_project: "drone-detection-islab"
+  tensorboard: true
+  log_interval: 10
+  eval_interval: 1

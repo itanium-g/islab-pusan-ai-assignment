@@ -1,0 +1,53 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: drone-detector-ddp-job
+  namespace: ai-workloads
+  labels:
+    app: drone-detector
+    experiment: attention-fpn-v3
+spec:
+  parallelism: 1
+  completions: 1
+  backoffLimit: 2
+  template:
+    metadata:
+      name: drone-detector-pod
+      labels:
+        app: drone-detector
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: trainer
+        image: islab/drone-detector:latest
+        imagePullPolicy: IfNotPresent
+        command:
+          - torchrun
+          - --nproc_per_node=2
+          - train.py
+          - --config
+          - configs/model3_fpn_attn.yaml
+          - --epochs
+          - "40"
+          - --ddp
+        resources:
+          limits:
+            nvidia.com/gpu: 2
+            memory: 32Gi
+            cpu: "8"
+          requests:
+            nvidia.com/gpu: 2
+            memory: 16Gi
+            cpu: "4"
+        volumeMounts:
+        - name: dataset-storage
+          mountPath: /workspace/curated_datasets
+        - name: checkpoints-storage
+          mountPath: /workspace/runs
+      volumes:
+      - name: dataset-storage
+        persistentVolumeClaim:
+          claimName: drone-dataset-pvc
+      - name: checkpoints-storage
+        persistentVolumeClaim:
+          claimName: drone-checkpoints-pvc

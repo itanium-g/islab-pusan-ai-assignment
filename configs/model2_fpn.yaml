@@ -1,0 +1,24 @@
+# Model 2: Multi-Scale Feature Pyramid Network Detector (P2, P3, P4)
+
+experiment:
+  name: "model2_fpn_multiscale"
+  output_dir: "runs/train"
+  seed: 42
+
+model:
+  name: "DroneNet-FPN"
+  type: "fpn"
+  in_channels: 3
+  num_classes: 1
+  base_channels: 32
+  strides: [4, 8, 16]
+
+training:
+  epochs: 40
+  batch_size: 16
+  learning_rate: 0.001
+  optimizer: "AdamW"
+  loss_weights:
+    obj: 1.0
+    box: 2.5
+    cls: 0.5

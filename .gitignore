@@ -1,0 +1,37 @@
+# Environments & Packages
+venv/
+.venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Python caches & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Heavy Raw Datasets (automatically fetched from Google Drive via scripts)
+curated_datasets/
+data/cached_640/
+dataset.zip
+*.part
+
+# Intermediate logs and temporary caches
+kaggle_logs/
+kaggle_output/
+kaggle_output_*/
+/tmp/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db

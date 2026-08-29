@@ -1,0 +1,51 @@
+[2026-08-29 06:17:21][INFO] TensorBoard logging initialized.
+[2026-08-29 06:17:21][INFO] === Starting Drone Detection Pipeline ===
+[2026-08-29 06:17:21][INFO] Loaded config: configs/model1_baseline.yaml
+[2026-08-29 06:17:21][INFO] World Size: 1 | Local Rank: 0 | Device: cuda:0
+[2026-08-29 06:17:21][INFO] Train samples: 1716 | Val samples: 360
+[2026-08-29 06:17:21][INFO] Model: VanillaDroneNet-Base | Total Parameters: 1.17M | Trainable: 1.17M
+[2026-08-29 06:17:21][INFO] Starting training: VanillaDroneNet-Base for 30 epochs.
+[2026-08-29 06:18:02][INFO] [Epoch 01/30] Train Loss: 2.1341 | Val AP@0.5: 43.95% | Val mAP@0.5:0.95: 12.07% | Precision: 68.30% | Recall: 49.57% | FPS: 166.4
+[2026-08-29 06:18:02][INFO] ==> New Best Model Saved with Val AP@0.5: 43.95%
+[2026-08-29 06:18:39][INFO] [Epoch 02/30] Train Loss: 1.2348 | Val AP@0.5: 60.49% | Val mAP@0.5:0.95: 21.13% | Precision: 92.36% | Recall: 61.79% | FPS: 183.0
+[2026-08-29 06:18:39][INFO] ==> New Best Model Saved with Val AP@0.5: 60.49%
+[2026-08-29 06:19:17][INFO] [Epoch 03/30] Train Loss: 1.0949 | Val AP@0.5: 55.05% | Val mAP@0.5:0.95: 20.99% | Precision: 90.38% | Recall: 57.39% | FPS: 181.1
+[2026-08-29 06:19:55][INFO] [Epoch 04/30] Train Loss: 0.9999 | Val AP@0.5: 55.44% | Val mAP@0.5:0.95: 21.86% | Precision: 86.43% | Recall: 58.81% | FPS: 182.6
+[2026-08-29 06:20:33][INFO] [Epoch 05/30] Train Loss: 0.9248 | Val AP@0.5: 65.42% | Val mAP@0.5:0.95: 25.85% | Precision: 93.82% | Recall: 66.90% | FPS: 177.2
+[2026-08-29 06:20:33][INFO] ==> New Best Model Saved with Val AP@0.5: 65.42%
+[2026-08-29 06:21:11][INFO] [Epoch 06/30] Train Loss: 0.8672 | Val AP@0.5: 77.30% | Val mAP@0.5:0.95: 34.56% | Precision: 95.05% | Recall: 76.42% | FPS: 180.1
+[2026-08-29 06:21:11][INFO] ==> New Best Model Saved with Val AP@0.5: 77.30%
+[2026-08-29 06:21:49][INFO] [Epoch 07/30] Train Loss: 0.8282 | Val AP@0.5: 77.88% | Val mAP@0.5:0.95: 34.71% | Precision: 95.52% | Recall: 78.69% | FPS: 181.6
+[2026-08-29 06:21:49][INFO] ==> New Best Model Saved with Val AP@0.5: 77.88%
+[2026-08-29 06:22:27][INFO] [Epoch 08/30] Train Loss: 0.7931 | Val AP@0.5: 79.32% | Val mAP@0.5:0.95: 38.48% | Precision: 95.11% | Recall: 80.11% | FPS: 177.7
+[2026-08-29 06:22:27][INFO] ==> New Best Model Saved with Val AP@0.5: 79.32%
+[2026-08-29 06:23:05][INFO] [Epoch 09/30] Train Loss: 0.7657 | Val AP@0.5: 81.62% | Val mAP@0.5:0.95: 40.17% | Precision: 92.58% | Recall: 83.24% | FPS: 182.5
+[2026-08-29 06:23:06][INFO] ==> New Best Model Saved with Val AP@0.5: 81.62%
+[2026-08-29 06:23:44][INFO] [Epoch 10/30] Train Loss: 0.7428 | Val AP@0.5: 82.84% | Val mAP@0.5:0.95: 38.17% | Precision: 88.58% | Recall: 82.67% | FPS: 179.9
+[2026-08-29 06:23:44][INFO] ==> New Best Model Saved with Val AP@0.5: 82.84%
+[2026-08-29 06:24:22][INFO] [Epoch 11/30] Train Loss: 0.7066 | Val AP@0.5: 85.02% | Val mAP@0.5:0.95: 44.64% | Precision: 94.80% | Recall: 85.51% | FPS: 182.9
+[2026-08-29 06:24:22][INFO] ==> New Best Model Saved with Val AP@0.5: 85.02%
+[2026-08-29 06:25:01][INFO] [Epoch 12/30] Train Loss: 0.7029 | Val AP@0.5: 82.42% | Val mAP@0.5:0.95: 38.26% | Precision: 93.76% | Recall: 83.24% | FPS: 178.9
+[2026-08-29 06:25:39][INFO] [Epoch 13/30] Train Loss: 0.6880 | Val AP@0.5: 84.29% | Val mAP@0.5:0.95: 43.09% | Precision: 95.25% | Recall: 82.67% | FPS: 178.9
+[2026-08-29 06:26:17][INFO] [Epoch 14/30] Train Loss: 0.6579 | Val AP@0.5: 85.58% | Val mAP@0.5:0.95: 42.95% | Precision: 95.43% | Recall: 86.08% | FPS: 180.3
+[2026-08-29 06:26:17][INFO] ==> New Best Model Saved with Val AP@0.5: 85.58%
+[2026-08-29 06:26:56][INFO] [Epoch 15/30] Train Loss: 0.6403 | Val AP@0.5: 82.24% | Val mAP@0.5:0.95: 36.70% | Precision: 93.94% | Recall: 83.66% | FPS: 175.9
+[2026-08-29 06:27:34][INFO] [Epoch 16/30] Train Loss: 0.6256 | Val AP@0.5: 81.58% | Val mAP@0.5:0.95: 41.82% | Precision: 93.89% | Recall: 80.82% | FPS: 177.2
+[2026-08-29 06:28:12][INFO] [Epoch 17/30] Train Loss: 0.6005 | Val AP@0.5: 87.95% | Val mAP@0.5:0.95: 46.98% | Precision: 95.44% | Recall: 89.20% | FPS: 180.1
+[2026-08-29 06:28:12][INFO] ==> New Best Model Saved with Val AP@0.5: 87.95%
+[2026-08-29 06:28:50][INFO] [Epoch 18/30] Train Loss: 0.5751 | Val AP@0.5: 86.25% | Val mAP@0.5:0.95: 44.44% | Precision: 94.34% | Recall: 87.64% | FPS: 177.2
+[2026-08-29 06:29:28][INFO] [Epoch 19/30] Train Loss: 0.5662 | Val AP@0.5: 86.81% | Val mAP@0.5:0.95: 45.91% | Precision: 94.20% | Recall: 87.64% | FPS: 179.9
+[2026-08-29 06:30:06][INFO] [Epoch 20/30] Train Loss: 0.5443 | Val AP@0.5: 84.98% | Val mAP@0.5:0.95: 46.41% | Precision: 95.31% | Recall: 86.51% | FPS: 176.3
+[2026-08-29 06:30:44][INFO] [Epoch 21/30] Train Loss: 0.5271 | Val AP@0.5: 86.82% | Val mAP@0.5:0.95: 47.08% | Precision: 94.82% | Recall: 88.35% | FPS: 176.2
+[2026-08-29 06:31:23][INFO] [Epoch 22/30] Train Loss: 0.5057 | Val AP@0.5: 85.84% | Val mAP@0.5:0.95: 48.08% | Precision: 94.74% | Recall: 87.07% | FPS: 179.1
+[2026-08-29 06:32:01][INFO] [Epoch 23/30] Train Loss: 0.4879 | Val AP@0.5: 87.40% | Val mAP@0.5:0.95: 48.84% | Precision: 94.98% | Recall: 88.78% | FPS: 177.2
+[2026-08-29 06:32:39][INFO] [Epoch 24/30] Train Loss: 0.4732 | Val AP@0.5: 87.71% | Val mAP@0.5:0.95: 47.53% | Precision: 94.56% | Recall: 88.92% | FPS: 175.7
+[2026-08-29 06:33:18][INFO] [Epoch 25/30] Train Loss: 0.4592 | Val AP@0.5: 87.88% | Val mAP@0.5:0.95: 49.30% | Precision: 93.87% | Recall: 89.20% | FPS: 180.1
+[2026-08-29 06:33:56][INFO] [Epoch 26/30] Train Loss: 0.4380 | Val AP@0.5: 87.33% | Val mAP@0.5:0.95: 49.37% | Precision: 94.82% | Recall: 88.49% | FPS: 180.3
+[2026-08-29 06:34:34][INFO] [Epoch 27/30] Train Loss: 0.4295 | Val AP@0.5: 86.92% | Val mAP@0.5:0.95: 49.05% | Precision: 94.80% | Recall: 88.07% | FPS: 179.9
+[2026-08-29 06:35:12][INFO] [Epoch 28/30] Train Loss: 0.4276 | Val AP@0.5: 87.90% | Val mAP@0.5:0.95: 49.92% | Precision: 94.71% | Recall: 89.06% | FPS: 177.2
+[2026-08-29 06:35:50][INFO] [Epoch 29/30] Train Loss: 0.4203 | Val AP@0.5: 88.02% | Val mAP@0.5:0.95: 49.75% | Precision: 94.72% | Recall: 89.20% | FPS: 180.2
+[2026-08-29 06:35:50][INFO] ==> New Best Model Saved with Val AP@0.5: 88.02%
+[2026-08-29 06:36:29][INFO] [Epoch 30/30] Train Loss: 0.4198 | Val AP@0.5: 87.63% | Val mAP@0.5:0.95: 49.94% | Precision: 94.42% | Recall: 88.92% | FPS: 176.6
+[2026-08-29 06:36:29][INFO] Training completed in 0.32 hours. Best Val AP@0.5: 88.02%
+[2026-08-29 06:36:29][INFO] Pipeline execution finished successfully.

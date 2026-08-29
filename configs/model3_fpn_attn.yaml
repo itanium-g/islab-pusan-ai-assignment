@@ -1,0 +1,32 @@
+# Model 3 (Proposed Best Model): Multi-Scale FPN + RFB + Coordinate Attention
+
+experiment:
+  name: "model3_fpn_attention_best"
+  output_dir: "runs/train"
+  seed: 42
+
+model:
+  name: "DroneNet-FPN-Attention"
+  type: "fpn_attn"
+  in_channels: 3
+  num_classes: 1
+  base_channels: 32
+  use_rfb: true
+  use_attention: true
+  strides: [4, 8, 16]
+
+training:
+  epochs: 45
+  batch_size: 16
+  learning_rate: 0.001
+  min_learning_rate: 0.00001
+  warmup_epochs: 3
+  weight_decay: 0.0005
+  optimizer: "AdamW"
+  scheduler: "cosine"
+  amp: true
+  grad_accum_steps: 1
+  loss_weights:
+    obj: 1.2
+    box: 3.0
+    cls: 0.5

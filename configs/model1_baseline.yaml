@@ -1,0 +1,24 @@
+# Model 1: Vanilla Baseline CNN Detector (Single-scale P3 Head)
+
+experiment:
+  name: "model1_vanilla_baseline"
+  output_dir: "runs/train"
+  seed: 42
+
+model:
+  name: "VanillaDroneNet-Base"
+  type: "baseline"
+  in_channels: 3
+  num_classes: 1
+  base_channels: 32
+  strides: [8]
+
+training:
+  epochs: 35
+  batch_size: 16
+  learning_rate: 0.001
+  optimizer: "AdamW"
+  loss_weights:
+    obj: 1.0
+    box: 2.0
+    cls: 0.5
