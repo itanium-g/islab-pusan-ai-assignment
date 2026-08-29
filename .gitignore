@@ -32,6 +32,23 @@ kaggle_output_*/
 *.swp
 *.swo
 
+# Credentials, Secrets & API Keys (Strictly Prohibited)
+*.env
+*.env.*
+*.env.local
+kaggle.json
+*.key
+*.pem
+*.pfx
+*.p12
+*.crt
+*credential*
+*secret*
+*token*.txt
+wandb/
+.wandb/
+
 # OS specific
 .DS_Store
 Thumbs.db
+
