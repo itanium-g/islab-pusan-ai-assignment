@@ -35,7 +35,7 @@
 \maketitle
 
 \begin{abstract}
-The rapid proliferation of Unmanned Aerial Vehicles (UAVs) in urban and natural airspace presents severe challenges for low-altitude airspace security, surveillance, and collision avoidance. Detecting small drones via optical sensors is fundamentally constrained by tiny physical target dimensions, extreme foreground-background scale imbalance, and atmospheric degradation such as dense fog, haze, and specular solar glare. Moreover, existing generic deep learning detectors rely heavily on large-scale pretraining (e.g., ImageNet or COCO), which obscures from-scratch inductive bias optimization and suffers from severe feature collapse when objects occupy less than 32$\times$32 pixels. In this paper, we propose \textbf{DroneNet-FPN-Attention}, a novel, fully-vanilla deep object detector designed and trained strictly from random initialization (scratch) without any pretrained weights. Our architecture incorporates a high-resolution feature hierarchy retaining P2 (stride 4, 160$\times$160), P3 (stride 8, 80$\times$80), and P4 (stride 16, 40$\times$40) scales, augmented with Receptive Field Blocks (RFB) and Coordinate Attention (CA) mechanisms to capture directional spatial cues across hazy and high-dynamic-range scenes. We formulate a customized multi-task objective combining Focal Objectness Loss ($\gamma=2.0, \alpha=0.25$), Complete Intersection-over-Union (CIoU) bounding box regression, and label-smoothed classification. Extensive empirical evaluation across 2,400 multi-environment frames (City, Forest, Lake under Foggy and Sunny conditions) demonstrates that our proposed architecture achieves a high validation $\text{AP}@0.5$ of \textbf{92.38\%} (with \textbf{97.01\%} Precision and \textbf{93.04\%} Recall) at \textbf{68.8 FPS} on dual NVIDIA Tesla T4 GPUs using DistributedDataParallel (DDP) training in 0.51 hours, outperforming baseline vanilla CNN architectures while maintaining a lightweight footprint of 4.12M parameters.
+The rapid proliferation of Unmanned Aerial Vehicles (UAVs) in urban and natural airspace presents severe challenges for low-altitude airspace security, surveillance, and collision avoidance. Detecting small drones via optical sensors is fundamentally constrained by tiny physical target dimensions, extreme foreground-background scale imbalance, and atmospheric degradation such as dense fog, haze, and specular solar glare. Moreover, existing generic deep learning detectors rely heavily on large-scale pretraining (e.g., ImageNet or COCO), which obscures from-scratch inductive bias optimization and suffers from severe feature collapse when objects occupy less than $32\times 32$ pixels. In this paper, we propose \textbf{DroneNet-FPN-Attention}, a novel, fully-vanilla deep object detector designed and trained strictly from random initialization (scratch) without any pretrained weights. Our architecture incorporates a high-resolution feature hierarchy retaining $\text{P}_2$ (stride 4, $160\times 160$), $\text{P}_3$ (stride 8, $80\times 80$), and $\text{P}_4$ (stride 16, $40\times 40$) scales, augmented with Receptive Field Blocks (RFB) and Coordinate Attention (CA) mechanisms to capture directional spatial cues across hazy and high-dynamic-range scenes. We formulate a customized multi-task objective combining Focal Objectness Loss ($\gamma=2.0, \alpha=0.25$), Complete Intersection-over-Union (CIoU) bounding box regression, and label-smoothed classification. Extensive empirical evaluation across 2,400 multi-environment frames (City, Forest, Lake under Foggy and Sunny conditions) demonstrates that our proposed architecture achieves a high validation $\text{AP}@0.5$ of \textbf{92.38\%} (with \textbf{97.01\%} Precision and \textbf{93.04\%} Recall) at \textbf{68.8 FPS} on dual NVIDIA Tesla T4 GPUs using DistributedDataParallel (DDP) training in 0.51 hours, outperforming baseline vanilla CNN architectures while maintaining a lightweight footprint of 4.12M parameters.
 \end{abstract}
 
 \textbf{\textit{Keywords}}---Anti-UAV, Small Object Detection, Feature Pyramid Network, Coordinate Attention, Receptive Field Block, From-Scratch Training, Multi-GPU DDP, PyTorch.
@@ -45,7 +45,7 @@ Low-altitude airspace monitoring and counter-unmanned aerial systems (C-UAS) hav
 
 However, optical small drone detection presents three fundamental technical bottlenecks:
 \begin{enumerate}
-    \item \textbf{Extreme Small Target Scale}: Drones at typical operational standoff distances ($50\text{m} - 300\text{m}$) occupy less than $0.1\%$ of the total camera image area. In high-resolution $2560\times 1440$ video streams, $95.42\%$ of drone bounding boxes span fewer than $32\times 32$ pixels when downscaled to standard $640\times 640$ detector grids. Conventional detectors (e.g., standard YOLO or SSD) aggressively downsample features by $32\times$ (P5 level), collapsing tiny drone signals into sub-pixel representations.
+    \item \textbf{Extreme Small Target Scale}: Drones at typical operational standoff distances ($50\text{ m} - 300\text{ m}$) occupy less than $0.1\%$ of the total camera image area. In high-resolution $2560\times 1440$ video streams, $95.42\%$ of drone bounding boxes span fewer than $32\times 32$ pixels when downscaled to standard $640\times 640$ detector grids. Conventional detectors aggressively downsample features by $32\times$ ($\text{P}_5$ level), collapsing tiny drone signals into sub-pixel representations.
     \item \textbf{Adverse Atmospheric Conditions}: Drone surveillance operates under extreme lighting and weather domain shifts. Dense fog causes severe Rayleigh and Mie scattering, attenuating object-to-background contrast and destroying high-frequency edge gradients. Conversely, sunny conditions produce strong specular reflections on rotors, deep cast shadows, and intense solar backlighting.
     \item \textbf{From-Scratch Optimization Constraints}: When pretrained transfer-learning backbones are prohibited, deep neural networks suffer from vanishing gradients, internal covariate shift, and extreme background-to-foreground class imbalance ($>10,000:1$ background grid cells per positive target).
 \end{enumerate}
@@ -54,13 +54,13 @@ To overcome these challenges, this paper presents an end-to-end vanilla deep lea
 \begin{itemize}
     \item We design \textbf{DroneNet-FPN-Attention}, a modular, object-oriented architecture built strictly from scratch with Kaiming-normal random initialization.
     \item We engineer a \textbf{High-Resolution Feature Pyramid Network (HR-FPN)} spanning strides 4, 8, and 16, combined with \textbf{Receptive Field Blocks (RFB)} and \textbf{Coordinate Attention (CA)} to preserve tiny spatial details and isolate drone signatures in heavy fog and glare.
-    \item We formulate a \textbf{Custom Multi-Task Loss} integrating Focal Objectness Loss, Complete-IoU (CIoU) bounding box regression, and classification loss, effectively stabilizing from-scratch convergence.
-    \item We implement a high-throughput, multi-GPU DistributedDataParallel (DDP) training pipeline with parallel letterbox pre-caching ($9.1\text{ GB} \rightarrow 150\text{ MB}$), achieving $\sim 3\text{s}$ per training epoch on cloud GPUs.
+    \item We formulate a \textbf{Custom Multi-Task Loss} integrating Focal Objectness Loss, Complete-IoU (CIoU) bounding box regression, and label-smoothed classification loss, effectively stabilizing from-scratch convergence.
+    \item We implement a high-throughput, multi-GPU DistributedDataParallel (DDP) training pipeline with parallel letterbox pre-caching ($9.1\text{ GB} \rightarrow 150\text{ MB}$), achieving $\sim 3\text{ s}$ per training epoch on cloud GPUs.
 \end{itemize}
 
 \section{Related Work}
 \subsection{Small Object Detection (SOD)}
-Small object detection has evolved from hand-crafted sliding-window feature descriptors (HOG, SIFT) to deep convolutional neural networks \cite{girshick2015fast, lin2017feature}. Feature Pyramid Networks (FPN) pioneered top-down feature fusion to propagate semantic information to shallow layers \cite{lin2017feature}. However, standard FPN implementations discard P2 (stride 4) features due to computational overhead in generic multi-class benchmarks (COCO). In small drone surveillance, retaining P2 features is mathematically essential, as a $12\times 12$ px drone retains an effective $3\times 3$ feature response at stride 4 versus $<0.4\times 0.4$ at stride 32.
+Small object detection has evolved from hand-crafted sliding-window feature descriptors (HOG, SIFT) to deep convolutional neural networks \cite{girshick2015fast, lin2017feature}. Feature Pyramid Networks (FPN) pioneered top-down feature fusion to propagate semantic information to shallow layers \cite{lin2017feature}. However, standard FPN implementations discard $\text{P}_2$ (stride 4) features due to computational overhead in generic multi-class benchmarks (COCO). In small drone surveillance, retaining $\text{P}_2$ features is mathematically essential, as a $12\times 12\text{ px}$ drone retains an effective $3\times 3$ feature response at stride 4 versus $<0.4\times 0.4$ at stride 32.
 
 \subsection{Anti-UAV Surveillance under Adverse Weather}
 Recent anti-UAV benchmarks highlight the vulnerability of deep models to environmental degradation \cite{anti_uav_bench2022, zhang2023drone}. Atmospheric turbulence, fog droplets, and solar flare alter the distribution of pixel intensities. Spatial attention mechanisms, such as Coordinate Attention \cite{hou2021coordinate} and Squeeze-and-Excitation \cite{hu2018squeeze}, have demonstrated efficacy in filtering background noise by weighting relevant feature channels and spatial coordinates.
@@ -73,7 +73,7 @@ Training object detectors without ImageNet pretraining (DSOD, ScratchDet) typica
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.92\textwidth]{figures/architecture_diagram.png}
-\caption{System Architecture of \textbf{DroneNet-FPN-Attention}. Input images are processed through a 4-stage residual backbone with Receptive Field Blocks (RFB). High-Resolution FPN fuses multi-scale features (P2: stride 4, P3: stride 8, P4: stride 16) enhanced with Coordinate Attention (CA). Decoupled heads independently predict class probabilities, objectness, and CIoU bounding box offsets.}
+\caption{System Architecture of \textbf{DroneNet-FPN-Attention}. Input images are processed through a 4-stage residual backbone with Receptive Field Blocks (RFB). High-Resolution FPN fuses multi-scale features ($\text{P}_2$: stride 4, $\text{P}_3$: stride 8, $\text{P}_4$: stride 16) enhanced with Coordinate Attention (CA). Decoupled heads independently predict class probabilities, objectness, and CIoU bounding box offsets.}
 \label{fig:arch}
 \end{figure*}
 
@@ -81,31 +81,31 @@ Training object detectors without ImageNet pretraining (DSOD, ScratchDet) typica
 The overall architecture of our proposed \textbf{DroneNet-FPN-Attention} detector is depicted in Fig.~\ref{fig:arch}. It consists of three decoupled OOP components:
 
 \subsubsection{Residual Backbone with Receptive Field Blocks}
-The backbone network processes an RGB input image $\mathbf{X} \in \mathbb{R}^{B \times 3 \times H \times W}$ (where $H=W=640$). It comprises an initial strided stem followed by three residual downsampling stages producing feature maps $C_2 \in \mathbb{R}^{B \times 64 \times \frac{H}{4} \times \frac{W}{4}}$, $C_3 \in \mathbb{R}^{B \times 128 \times \frac{H}{8} \times \frac{W}{8}}$, and $C_4 \in \mathbb{R}^{B \times 256 \times \frac{H}{16} \times \frac{W}{16}}$.
+The backbone network processes an RGB input image $\mathbf{X} \in \mathbb{R}^{B \times 3 \times H \times W}$ (where $H=W=640$). It comprises an initial strided stem followed by three residual downsampling stages producing feature maps $\mathbf{C}_2 \in \mathbb{R}^{B \times 64 \times \frac{H}{4} \times \frac{W}{4}}$, $\mathbf{C}_3 \in \mathbb{R}^{B \times 128 \times \frac{H}{8} \times \frac{W}{8}}$, and $\mathbf{C}_4 \in \mathbb{R}^{B \times 256 \times \frac{H}{16} \times \frac{W}{16}}$.
 
-To expand the effective receptive field on $C_4$ without spatial downsampling, we integrate a Receptive Field Block (RFB) consisting of multi-branch dilated convolutions with rates $r \in \{1, 2, 3\}$. The RFB mimics human receptive field structures, allowing the network to capture contextual sky and canopy relationships without blurring fine drone edges.
+To expand the effective receptive field on $\mathbf{C}_4$ without spatial downsampling, we integrate a Receptive Field Block (RFB) consisting of multi-branch dilated convolutions with rates $r \in \{1, 2, 3\}$. The RFB mimics human receptive field structures, allowing the network to capture contextual sky and canopy relationships without blurring fine drone edges.
 
 \subsubsection{High-Resolution FPN with Coordinate Attention (CA)}
-The neck module constructs a feature pyramid $\{P_2, P_3, P_4\}$ via lateral $1\times 1$ projections and top-down nearest-neighbor upsampling. To suppress fog noise and highlight drone coordinates, each pyramid level is augmented with Coordinate Attention (CA) \cite{hou2021coordinate}. 
+The neck module constructs a feature pyramid $\{\mathbf{P}_2, \mathbf{P}_3, \mathbf{P}_4\}$ via lateral $1\times 1$ projections and top-down nearest-neighbor upsampling. To suppress fog noise and highlight drone coordinates, each pyramid level is augmented with Coordinate Attention (CA) \cite{hou2021coordinate}. 
 
 Unlike standard 2D global pooling, Coordinate Attention decomposes spatial pooling into two 1D feature encodings along horizontal ($X$) and vertical ($Y$) axes:
 \begin{equation}
-z_c^h(h) = \frac{1}{W} \sum_{0 \le i < W} x_c(h, i), \quad z_c^w(w) = \frac{1}{H} \sum_{0 \le j < H} x_c(j, w)
+z_c^h(h) = \frac{1}{W} \sum_{i=0}^{W-1} x_c(h, i), \quad z_c^w(w) = \frac{1}{H} \sum_{j=0}^{H-1} x_c(j, w)
 \end{equation}
-The aggregated feature maps are concatenated, transformed via a shared $1\times 1$ convolution $\mathbf{F}_1$, non-linearly activated by SiLU, and split into directional attention vectors:
+The aggregated feature maps are concatenated, transformed via a shared $1\times 1$ convolution $\mathbf{F}_1$, non-linearly activated by SiLU ($\delta$), and split into directional attention vectors:
 \begin{equation}
 \mathbf{g}^h = \sigma\left(\mathbf{F}_h(\mathbf{f}^h)\right), \quad \mathbf{g}^w = \sigma\left(\mathbf{F}_w(\mathbf{f}^w)\right)
 \end{equation}
-The final attention-enhanced feature map is computed as:
+where $\sigma(\cdot)$ denotes the sigmoid activation function. The final attention-enhanced feature map is computed via element-wise multiplication:
 \begin{equation}
 y_c(i, j) = x_c(i, j) \times g_c^h(i) \times g_c^w(j)
 \end{equation}
 
 \subsubsection{Decoupled Detection Heads}
-For each pyramid level $P_k$ ($k \in \{2, 3, 4\}$), we deploy decoupled convolutional heads. A classification branch outputs class logits $\hat{\mathbf{c}} \in \mathbb{R}^{B \times K \times H_k \times W_k}$, an objectness branch predicts foreground confidence $\hat{\mathbf{p}}_{\text{obj}} \in \mathbb{R}^{B \times 1 \times H_k \times W_k}$, and a localization branch outputs continuous offsets $(t_x, t_y, t_w, t_h) \in \mathbb{R}^{B \times 4 \times H_k \times W_k}$.
+For each pyramid level $\mathbf{P}_k$ ($k \in \{2, 3, 4\}$), we deploy decoupled convolutional heads. A classification branch outputs class logits $\hat{\mathbf{c}} \in \mathbb{R}^{B \times K \times H_k \times W_k}$, an objectness branch predicts foreground confidence $\hat{\mathbf{p}}_{\text{obj}} \in \mathbb{R}^{B \times 1 \times H_k \times W_k}$, and a localization branch outputs continuous offsets $(t_x, t_y, t_w, t_h) \in \mathbb{R}^{B \times 4 \times H_k \times W_k}$.
 
 \subsection{Custom Multi-Task Objective Function}
-Training from scratch with extreme scale imbalance requires a carefully balanced objective function:
+Training from scratch with extreme scale imbalance requires a carefully balanced composite objective function:
 \begin{equation}
 \mathcal{L}_{\text{total}} = \lambda_{\text{obj}} \mathcal{L}_{\text{obj}} + \lambda_{\text{box}} \mathcal{L}_{\text{box}} + \lambda_{\text{cls}} \mathcal{L}_{\text{cls}}
 \end{equation}
@@ -115,20 +115,28 @@ Because $>99.9\%$ of grid cells correspond to background sky/terrain, standard b
 \begin{equation}
 \mathcal{L}_{\text{obj}} = -\alpha_t (1 - p_t)^\gamma \log(p_t)
 \end{equation}
-where $p_t = p$ for foreground and $1-p$ for background, with focusing parameter $\gamma=2.0$ and weighting factor $\alpha=0.25$.
+where $p_t = p$ for foreground and $1-p$ for background, with focusing parameter $\gamma=2.0$ and balancing factor $\alpha=0.25$.
 
 \subsubsection{Complete-IoU Loss ($\mathcal{L}_{\text{box}}$)}
-For positive matched cells, bounding box regression is optimized via Complete-IoU (CIoU) loss, which penalizes bounding box overlap area, center Euclidean distance, and aspect ratio discrepancy:
+For positive matched cells, bounding box regression is optimized via Complete-IoU (CIoU) loss, which penalizes bounding box overlap area, center Euclidean distance, and aspect ratio discrepancy simultaneously:
 \begin{equation}
-\mathcal{L}_{\text{box}} = 1 - \text{IoU} + \frac{\rho^2(\mathbf{b}, \mathbf{b}^{gt})}{c^2} + \alpha v
+\mathcal{L}_{\text{box}} = 1 - \text{IoU} + \frac{\rho^2(\mathbf{b}, \mathbf{b}^{\text{gt}})}{c^2} + \alpha_{\text{ciou}} v
 \end{equation}
-where $\rho(\cdot)$ is Euclidean distance, $c$ is the diagonal length of the smallest enclosing box, and $v$ measures aspect ratio consistency:
+where $\rho(\mathbf{b}, \mathbf{b}^{\text{gt}}) = \|\mathbf{b} - \mathbf{b}^{\text{gt}}\|_2$ denotes the Euclidean distance between predicted and ground-truth box centers, $c$ is the diagonal length of the smallest enclosing bounding box covering both boxes, and $v$ measures aspect ratio consistency:
 \begin{equation}
-v = \frac{4}{\pi^2} \left( \arctan\frac{w^{gt}}{h^{gt}} - \arctan\frac{w}{h} \right)^2, \quad \alpha = \frac{v}{(1 - \text{IoU}) + v}
+v = \frac{4}{\pi^2} \left( \arctan\frac{w^{\text{gt}}}{h^{\text{gt}}} - \arctan\frac{w}{h} \right)^2
+\end{equation}
+with dynamic balancing coefficient:
+\begin{equation}
+\alpha_{\text{ciou}} = \frac{v}{(1 - \text{IoU}) + v}
 \end{equation}
 
 \subsubsection{Classification Loss ($\mathcal{L}_{\text{cls}}$)}
-Class probability is computed using Binary Cross-Entropy with label smoothing ($\epsilon=0.05$). In our multi-task formulation, loss weights are set to $\lambda_{\text{obj}}=1.2$, $\lambda_{\text{box}}=3.0$, and $\lambda_{\text{cls}}=0.5$.
+Class probability is computed using Binary Cross-Entropy with label smoothing parameter $\epsilon=0.05$:
+\begin{equation}
+\mathcal{L}_{\text{cls}} = -\sum_{k=1}^K \left[ y_k^{\text{ls}} \log(\hat{c}_k) + (1 - y_k^{\text{ls}}) \log(1 - \hat{c}_k) \right]
+\end{equation}
+where $y_k^{\text{ls}} = y_k (1 - \epsilon) + 0.5 \epsilon$. In our multi-task formulation, loss weighting hyperparameters are set to $\lambda_{\text{obj}}=1.2$, $\lambda_{\text{box}}=3.0$, and $\lambda_{\text{cls}}=0.5$.
 
 \section{Experimental Setup}
 
@@ -141,7 +149,10 @@ To prevent temporal video frame leakage, we perform sequence-aware stratified sp
 Models are implemented in PyTorch and trained on NVIDIA GPUs with Automatic Mixed Precision (AMP). Optimization parameters:
 \begin{itemize}
     \item \textbf{Optimizer}: AdamW ($\beta_1=0.9, \beta_2=0.999$, weight decay $= 5\times 10^{-4}$).
-    \item \textbf{Learning Rate}: Initial $\text{lr}=10^{-3}$, 3-epoch linear warm-up, followed by Cosine Annealing down to $10^{-5}$ across 40 epochs.
+    \item \textbf{Learning Rate}: Initial $\eta_0 = 10^{-3}$, 3-epoch linear warm-up, followed by Cosine Annealing decay down to $\eta_{\text{min}} = 10^{-5}$ across 40 epochs:
+    \begin{equation}
+    \eta_t = \eta_{\text{min}} + \frac{1}{2}(\eta_0 - \eta_{\text{min}})\left(1 + \cos\left(\frac{t}{T_{\text{max}}}\pi\right)\right)
+    \end{equation}
     \item \textbf{Batch Size}: 16 (single-GPU) / 32 (dual-GPU DDP).
     \item \textbf{Resolution}: $640\times 640$ letterboxed input.
 \end{itemize}
@@ -206,7 +217,7 @@ Table~\ref{tab:domain} breaks down detection accuracy across environmental domai
 \label{tab:ablation}
 \begin{tabular}{@{}ccccc@{}}
 \toprule
-\textbf{HR-FPN (P2)} & \textbf{RFB} & \textbf{Coord Attn} & \textbf{CIoU Loss} & \textbf{mAP@0.5 (\%)} \\
+\textbf{HR-FPN ($\text{P}_2$)} & \textbf{RFB} & \textbf{Coord Attn} & \textbf{CIoU Loss} & \textbf{mAP@0.5 (\%)} \\
 \midrule
 - & - & - & - & 88.02 \\
 \checkmark & - & - & - & 89.90 \\
@@ -220,14 +231,14 @@ Table~\ref{tab:domain} breaks down detection accuracy across environmental domai
 \subsection{Ablation Study}
 Table~\ref{tab:ablation} analyzes the incremental contribution of each component:
 \begin{enumerate}
-    \item Adding High-Resolution P2 features improves mAP@0.5 by $+1.88\%$, confirming the necessity of preserving fine spatial grids for small targets.
+    \item Adding High-Resolution $\text{P}_2$ features improves mAP@0.5 by $+1.88\%$, confirming the necessity of preserving fine spatial grids for small targets.
     \item Transitioning from Smooth L1 to CIoU loss yields a $+1.25\%$ boost in localization accuracy.
     \item Receptive Field Blocks (RFB) contribute $+0.65\%$ by encoding multi-scale contextual awareness.
     \item Coordinate Attention adds $+0.58\%$ while boosting Precision from $95.2\%$ to \textbf{97.01\%}.
 \end{enumerate}
 
 \section{Conclusion}
-In this paper, we proposed \textbf{DroneNet-FPN-Attention}, a high-performance vanilla deep object detector engineered from scratch for small UAV surveillance in adverse weather. By combining high-resolution feature pyramids (P2, P3, P4), Receptive Field Blocks, and Coordinate Attention with a custom Focal-CIoU multi-task loss, our model achieves \textbf{92.38\% AP@0.5}, \textbf{97.01\% Precision}, and \textbf{68.8 FPS} throughput without any pretrained weights. The model demonstrates superior resilience to fog and sun glare, providing a lightweight, reproducible, and deployable solution for airspace security.
+In this paper, we proposed \textbf{DroneNet-FPN-Attention}, a high-performance vanilla deep object detector engineered from scratch for small UAV surveillance in adverse weather. By combining high-resolution feature pyramids ($\text{P}_2, \text{P}_3, \text{P}_4$), Receptive Field Blocks, and Coordinate Attention with a custom Focal-CIoU multi-task loss, our model achieves \textbf{92.38\% AP@0.5}, \textbf{97.01\% Precision}, and \textbf{68.8 FPS} throughput without any pretrained weights. The model demonstrates superior resilience to fog and sun glare, providing a lightweight, reproducible, and deployable solution for airspace security.
 
 \begin{thebibliography}{00}
 \bibitem{uav_survey2023} A. Coluccia et al., ``Drone detection, classification and tracking: A survey of the state of the art,'' \textit{IEEE Aerospace and Electronic Systems Magazine}, vol. 38, no. 5, pp. 20--34, 2023.
