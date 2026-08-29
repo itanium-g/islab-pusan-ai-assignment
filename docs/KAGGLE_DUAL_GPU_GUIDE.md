@@ -8,7 +8,7 @@ This guide details how to run the DroneNet-FPN-Attention training, evaluation, a
 
 The pipeline automatically fetches the full 2,400-frame AirSim UAV dataset directly from Google Drive:
 - **Google Drive File ID**: `19L9yUP62xMESJMw6srf5HGcL8s5b0gv8`
-- The script uses `gdown` with chunked unzipping to `/tmp/obj_det_base/`, ensuring the dataset is ephemeral and does not inflate the downloadable Kaggle output archive ($< 15\text{ MB}$).
+- The script uses `gdown` with chunked unzipping to `/tmp/obj_det_base/`, ensuring the dataset is ephemeral and does not inflate the downloadable Kaggle output archive (< 15 MB).
 
 ---
 
@@ -97,8 +97,8 @@ Once status reaches `"complete"`, download all trained model weights, ONNX expor
 
 ## 5. Generated Output Artifacts
 
-Upon completion, Kaggle produces the following lightweight outputs ($< 15\text{ MB}$ total):
-- `weights/DroneNet-FPN-Attention_inference.pth` (Stripped inference weights, $\sim 16.6\text{ MB}$)
+Upon completion, Kaggle produces the following lightweight outputs (< 15 MB total):
+- `weights/DroneNet-FPN-Attention_inference.pth` (Stripped inference weights, ~16.6 MB)
 - `weights/DroneNet-FPN-Attention.onnx` (ONNX computational graph)
 - `weights/DroneNet-FPN-Attention.torchscript.pt` (TorchScript tracing)
 - `runs/eval/` (Evaluation metrics, PR curves, Confusion Matrices)

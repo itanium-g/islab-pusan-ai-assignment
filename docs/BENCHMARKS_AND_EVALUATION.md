@@ -10,20 +10,20 @@ Evaluated on the validation partition (360 multi-environment frames, 720 drone i
 
 | Model Architecture | Params | FLOPs | Best Val AP@0.50 | Precision | Recall | Real-Time Throughput |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Model 1: Vanilla Base CNN** (Single-Scale $\text{P}_3$) | 1.17M | 12.8G | 88.02% | 94.72% | 89.20% | **180.2 FPS** |
-| **Model 2: DroneNet-FPN** (Multi-Scale $\text{P}_2/\text{P}_3/\text{P}_4$) | 3.87M | 21.6G | 92.80% | 96.77% | 93.61% | 73.6 FPS |
+| **Model 1: Vanilla Base CNN** (Single-Scale P3) | 1.17M | 12.8G | 88.02% | 94.72% | 89.20% | **180.2 FPS** |
+| **Model 2: DroneNet-FPN** (Multi-Scale P2/P3/P4) | 3.87M | 21.6G | 92.80% | 96.77% | 93.61% | 73.6 FPS |
 | **Model 3: DroneNet-FPN-Attention (Best)** 🏆 | **4.12M** | **24.8G** | **92.38%** | **97.01%** | **93.04%** | **68.8 FPS** |
 
 ---
 
 ## 2. Key Ablation Insights
 
-1. **Impact of High-Resolution $\text{P}_2$ Scale (Stride 4)**:
-   - Adding the $\text{P}_2$ pyramid level increased AP@0.5 by **$+4.78\%$** (Model 1 vs Model 2).
-   - Analysis: $51.52\%$ of dataset targets are $< 16\text{px}$. Standard stride 8/16 architectures downsample these targets into 1-2 feature cells, whereas stride 4 retains a $4\times$ larger spatial activation map.
+1. **Impact of High-Resolution P2 Scale (Stride 4)**:
+   - Adding the P2 pyramid level increased AP@0.5 by **+4.78%** (Model 1 vs Model 2).
+   - Analysis: 51.52% of dataset targets are < 16px. Standard stride 8/16 architectures downsample these targets into 1-2 feature cells, whereas stride 4 retains a 4x larger spatial activation map.
 
 2. **Impact of Directional Coordinate Attention (CA)**:
-   - Adding Coordinate Attention elevated Precision to **$97.01\%$** (highest across all models).
+   - Adding Coordinate Attention elevated Precision to **97.01%** (highest across all models).
    - Analysis: 1D horizontal and vertical pooling preserves exact drone spatial coordinate trajectories through dense fog haze, preventing false positives on background building edges.
 
 3. **Impact of Receptive Field Block (RFB)**:
