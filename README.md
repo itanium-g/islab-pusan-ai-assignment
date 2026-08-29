@@ -37,7 +37,7 @@ For exhaustive technical details, please consult our specialized documentation g
 
 1. **100% From-Scratch Vanilla Architecture (Zero Pretrained Weights)**:
    - Designed strictly using pure PyTorch `nn.Module` object-oriented components.
-   - Initialized with calibrated Kaiming-He normal distribution $\mathcal{N}(0, \sqrt{2/\text{fan\_in}})$.
+   - Initialized with calibrated Kaiming-He normal distribution $\mathcal{N}(0, \sqrt{2/\text{fan-in}})$.
 2. **Small-Target Scale Optimization (< 32px Targets)**:
    - Physical dataset analysis reveals **95.42% of drone bounding boxes are < 32 x 32 pixels** (51.52% are < 16 x 16 pixels).
    - Our **High-Resolution Feature Pyramid Network (HR-FPN)** retains **P2 (stride 4, 160 x 160)**, **P3 (stride 8, 80 x 80)**, and **P4 (stride 16, 40 x 40)** representations, preventing microscopic spatial feature collapse.
