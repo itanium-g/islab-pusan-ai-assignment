@@ -26,7 +26,7 @@ For exhaustive technical details, please consult our specialized documentation g
 
 | Document | Description |
 | :--- | :--- |
-| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN $\text{P}_2/\text{P}_3/\text{P}_4$, Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
+| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN ($\text{P}_2/\text{P}_3/\text{P}_4$), Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
 | ☁️ [**Kaggle Dual-GPU Guide**](docs/KAGGLE_DUAL_GPU_GUIDE.md) | DistributedDataParallel (DDP) on Dual Tesla T4 GPUs, CLI `--accelerator NvidiaTeslaT4`, auto-downloading Google Drive |
 | 🚀 [**Getting Started & Setup**](docs/GETTING_STARTED.md) | Local (PowerShell/Linux/macOS), WSL2 Ubuntu, Docker containerization, dataset preprocessing, and inference |
 | 📊 [**Benchmarks & Ablations**](docs/BENCHMARKS_AND_EVALUATION.md) | Quantitative comparison (Model 1 vs 2 vs 3), environmental domain robustness, latency analysis |

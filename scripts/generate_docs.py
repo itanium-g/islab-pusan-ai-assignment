@@ -1,7 +1,7 @@
 import os
 
-def get_architecture_doc():
-    return """# 🛸 DroneNet-FPN-Attention: Architecture & Theoretical Foundations
+def write_architecture():
+    content = """# 🛸 DroneNet-FPN-Attention: Architecture & Theoretical Foundations
 
 This document provides an exhaustive technical deep-dive into the mathematical design, neural network architectures, custom multi-task loss formulations, directional coordinate attention mechanisms, and sequence-aware data pipelines designed for detecting and classifying small Unmanned Aerial Vehicles (UAVs) under severe atmospheric degradation.
 
@@ -24,14 +24,16 @@ Small UAV object detection presents extreme physical and mathematical bottleneck
 
 ### 1.1 Target Scale Collapse at Deep Strides
 Analysis of the 2,400 curated frames (4,800 drone instances) reveals:
-- A $12 \\times 12\\text{ px}$ drone on a standard $640 \\times 640$ input downsampled to Stride 32 $\\text{P}_5$ is reduced to a fractional sub-pixel dimension $0.375 \\times 0.375\\text{ px}$, resulting in complete feature collapse.
+- A $12 \\times 12\\text{ px}$ drone on a standard $640 \\times 640$ input downsampled to Stride 32 ($\\text{P}_5$) is reduced to a fractional sub-pixel dimension ($0.375 \\times 0.375\\text{ px}$), resulting in complete feature collapse.
 - Our proposed **High-Resolution Feature Pyramid Network (HR-FPN)** retains **$\\text{P}_2$ (Stride 4, $160 \\times 160$)**, preserving a $3 \\times 3\\text{ px}$ feature grid for even the smallest targets.
 
 ### 1.2 Atmospheric Optical Degradation
 Atmospheric scattering follows Koschmieder's Law:
+
 $$
-I(x) = J(x)e^{-\\beta d(x)} + A\\left(1 - e^{-\\beta d(x)}\right)
+I(x) = J(x)e^{-\\beta d(x)} + A\\left(1 - e^{-\\beta d(x)}\\right)
 $$
+
 where $J(x)$ is scene radiance, $\\beta$ is the atmospheric extinction coefficient, $d(x)$ is target distance, and $A$ is atmospheric airlight. Dense fog attenuates high-frequency rotor and fuselage edges into the background.
 
 ---
@@ -44,16 +46,16 @@ We designed and evaluated three progressively sophisticated neural architectures
 | :--- | :--- | :--- | :--- |
 | **Design Paradigm** | Single-Scale Baseline | Multi-Scale Feature Pyramid | High-Res FPN + Receptive Attention |
 | **Backbone Network** | 4-Stage Plain ConvNet | 4-Stage Residual ConvNet | 4-Stage Residual Backbone ($\\text{C}_1$–$\\text{C}_4$) |
-| **Multi-Scale Neck** | ❌ None (Single $\\text{P}_3$) | ✅ Top-Down FPN $\\text{P}_2, \\text{P}_3, \\text{P}_4$ | ✅ High-Res FPN with Lateral Convs |
-| **Spatial Strides** | Stride 8 $80 \\times 80$ | Strides 4, 8, 16 | Strides 4, 8, 16 $160 \\times 160, 80 \\times 80, 40 \\times 40$ |
+| **Multi-Scale Neck** | ❌ None (Single $\\text{P}_3$) | ✅ Top-Down FPN ($\\text{P}_2, \\text{P}_3, \\text{P}_4$) | ✅ High-Res FPN with Lateral Convs |
+| **Spatial Strides** | Stride 8 ($80 \\times 80$) | Strides 4, 8, 16 | Strides 4, 8, 16 ($160 \\times 160, 80 \\times 80, 40 \\times 40$) |
 | **Spatial Attention** | ❌ None | ❌ None | ✅ Directional Coordinate Attention (CA) |
 | **Contextual Expansion**| ❌ Standard Conv | ❌ Standard Conv | ✅ Receptive Field Block (RFB, $r \\in \\{1,2,3\\}$) |
 | **Head Architecture** | Coupled ConvHead | Shared FPN Heads | Decoupled Classification & Regression Heads |
 | **Anchor Calibration** | 3 anchors at Stride 8 | 9 anchors (3 per scale) | 9 calibrated multi-scale anchors |
-| **Loss Formulation** | Smooth L1 + BCE | CIoU + Focal Loss | Focal $\\gamma=2, \\alpha=0.25$ + CIoU + Label-Smooth CE |
-| **Total Parameters** | **1.17M** 1.17M $1,173,040$ | **3.87M** 3.87M $3,869,456$ | **4.12M** 4.12M $4,124,240$ |
-| **FLOPs $640 \\times 640$**| **12.8 GFLOPs** | **21.6 GFLOPs** | **24.8 GFLOPs** |
-| **Inference Latency** | **186.6 FPS** $5.36\\text{ ms}$ | **80.1 FPS** $12.48\\text{ ms}$ | **74.6 FPS** $13.40\\text{ ms}$ |
+| **Loss Formulation** | Smooth L1 + BCE | CIoU + Focal Loss | Focal ($\\gamma=2, \\alpha=0.25$) + CIoU + Label-Smooth CE |
+| **Total Parameters** | **1.17M** ($1,173,040$) | **3.87M** ($3,869,456$) | **4.12M** ($4,124,240$) |
+| **FLOPs ($640 \\times 640$)**| **12.8 GFLOPs** | **21.6 GFLOPs** | **24.8 GFLOPs** |
+| **Inference Latency** | **186.6 FPS** ($5.36\\text{ ms}$) | **80.1 FPS** ($12.48\\text{ ms}$) | **74.6 FPS** ($13.40\\text{ ms}$) |
 | **Val AP@0.50** | **88.02%** | **92.80%** | **92.38%** |
 | **Precision** | **94.72%** | **96.77%** | **96.32%** (Peak **97.01%**) |
 | **Recall** | **89.20%** | **93.61%** | **93.04%** |
@@ -100,36 +102,43 @@ We designed and evaluated three progressively sophisticated neural architectures
 ```
 
 ### 3.1 High-Resolution Feature Pyramid Network (HR-FPN)
-Standard FPN architectures construct pyramids at strides $\\{8, 16, 32\\}$ $\\text{P}_3, \\text{P}_4, \\text{P}_5$. In small drone detection, $\\text{P}_5$ contains zero informative signal. We replace $\\text{P}_5$ with high-resolution $\\text{P}_2$:
+Standard FPN architectures construct pyramids at strides $\\{8, 16, 32\\}$ ($\\text{P}_3, \\text{P}_4, \\text{P}_5$). In small drone detection, $\\text{P}_5$ contains zero informative signal. We replace $\\text{P}_5$ with high-resolution $\\text{P}_2$:
 
-- **$\\text{P}_2$ (Stride 4, Resolution $160 \\times 160$)**: Dedicated to microscopic drones $4\\text{px} - 24\\text{px}$. Preserves rotor edge gradients and landing gear silhouettes.
-- **$\\text{P}_3$ (Stride 8, Resolution $80 \\times 80$)**: Dedicated to medium-scale drones $24\\text{px} - 64\\text{px}$. Balances context and localization precision.
-- **$\\text{P}_4$ (Stride 16, Resolution $40 \\times 40$)**: Dedicated to close-range UAVs $> 64\\text{px}$. Captures global airframe structure.
+- **$\\text{P}_2$ (Stride 4, Resolution $160 \\times 160$)**: Dedicated to microscopic drones ($4\\text{px} - 24\\text{px}$). Preserves rotor edge gradients and landing gear silhouettes.
+- **$\\text{P}_3$ (Stride 8, Resolution $80 \\times 80$)**: Dedicated to medium-scale drones ($24\\text{px} - 64\\text{px}$). Balances context and localization precision.
+- **$\\text{P}_4$ (Stride 16, Resolution $40 \\times 40$)**: Dedicated to close-range UAVs ($> 64\\text{px}$). Captures global airframe structure.
 
 ### 3.2 Directional Coordinate Attention (CA)
-Standard Squeeze-and-Excitation (SE) attention performs 2D global spatial average pooling, discarding exact spatial coordinates. **Coordinate Attention** decomposes 2D pooling into two orthogonal 1D spatial pooling operations along the horizontal $X$ and vertical $Y$ axes:
+Standard Squeeze-and-Excitation (SE) attention performs 2D global spatial average pooling, discarding exact spatial coordinates. **Coordinate Attention** decomposes 2D pooling into two orthogonal 1D spatial pooling operations along the horizontal ($X$) and vertical ($Y$) axes:
 
 $$
 \\mathbf{z}_c^h(h) = \\frac{1}{W} \\sum_{i=0}^{W-1} x_c(h, i), \\quad \\mathbf{z}_c^w(w) = \\frac{1}{H} \\sum_{j=0}^{H-1} x_c(j, w)
 $$
 
 1. The directional vectors $\\mathbf{z}^h \\in \\mathbb{R}^{C \\times H}$ and $\\mathbf{z}^w \\in \\mathbb{R}^{C \\times W}$ are concatenated along the spatial dimension and transformed via a shared $1 \\times 1$ convolution:
-   $$
-   \\mathbf{f} = \\delta\\left( \\text{BatchNorm}\\left( \\text{Conv}_{1\\times 1}\\left( [\\mathbf{z}^h, \\mathbf{z}^w] \\right) \\right) \\right)
-   $$
+
+$$
+\\mathbf{f} = \\delta\\left( \\text{BatchNorm}\\left( \\text{Conv}_{1\\times 1}\\left( [\\mathbf{z}^h, \\mathbf{z}^w] \\right) \\right) \\right)
+$$
+
    where $\\delta$ is the Non-Linear Hard-Swish activation and reduction ratio $r = 16$.
+
 2. The intermediate tensor $\\mathbf{f} \\in \\mathbb{R}^{C/r \\times (H+W)}$ is split back into $\\mathbf{f}^h \\in \\mathbb{R}^{C/r \\times H}$ and $\\mathbf{f}^w \\in \\mathbb{R}^{C/r \\times W}$.
-3. Two independent $1 \\times 1$ convolutions and sigmoid $\\sigma$ activations generate coordinate attention weight maps:
-   $$
-   \\mathbf{g}^h = \\sigma\\left(\\text{Conv}_h(\\mathbf{f}^h)\right), \\quad \\mathbf{g}^w = \\sigma\\left(\\text{Conv}_w(\\mathbf{f}^w)\right)
-   $$
+
+3. Two independent $1 \\times 1$ convolutions and sigmoid ($\\sigma$) activations generate coordinate attention weight maps:
+
+$$
+\\mathbf{g}^h = \\sigma\\left(\\text{Conv}_h(\\mathbf{f}^h)\\right), \\quad \\mathbf{g}^w = \\sigma\\left(\\text{Conv}_w(\\mathbf{f}^w)\\right)
+$$
+
 4. The output feature representation is reweighted along both orthogonal directions:
-   $$
-   \\mathbf{y}_c(i, j) = x_c(i, j) \\times \\mathbf{g}_c^h(i) \\times \\mathbf{g}_c^w(j)
-   $$
+
+$$
+\\mathbf{y}_c(i, j) = x_c(i, j) \\times \\mathbf{g}_c^h(i) \\times \\mathbf{g}_c^w(j)
+$$
 
 ### 3.3 Receptive Field Block (RFB)
-The RFB module applies multi-branch dilated convolutions $r \\in \\{1, 2, 3\\}$ simulating the human visual receptive field:
+The RFB module applies multi-branch dilated convolutions ($r \\in \\{1, 2, 3\\}$) simulating the human visual receptive field:
 - **Branch 1**: $1 \\times 1\\text{ Conv}$ (Identity shortcut)
 - **Branch 2**: $1 \\times 1\\text{ Conv} \\rightarrow 3 \\times 3\\text{ Conv}$ (Rate $r=1$)
 - **Branch 3**: $1 \\times 1\\text{ Conv} \\rightarrow 3 \\times 3\\text{ Conv} \\rightarrow 3 \\times 3\\text{ Dilated Conv}$ (Rate $r=2$)
@@ -159,14 +168,16 @@ where calibrated loss weights are $\\lambda_{\\text{obj}} = 1.2, \\lambda_{\\tex
  Handles 10,000:1 Imbalance      Scale-Invariant Localization     Prevents Overconfidence
 ```
 
-### 4.1 Focal Objectness Loss $\\mathcal{L}_{\\text{obj}}$
+### 4.1 Focal Objectness Loss ($\\mathcal{L}_{\\text{obj}}$)
 To prevent overwhelming gradient dominance from $> 10,000$ negative background cells:
+
 $$
 \\mathcal{L}_{\\text{obj}} = -\\alpha_t (1 - p_t)^\\gamma \\log(p_t)
 $$
-with focusing exponent $\\gamma = 2.0$ and balancing factor $\\alpha = 0.25$. Easy background examples $p_t \\approx 1$ generate negligible loss $(1-p_t)^2 \\approx 0$, allowing the network to focus gradient updates on ambiguous drone silhouettes.
 
-### 4.2 Complete Intersection-over-Union Loss $\\mathcal{L}_{\\text{box}}$
+with focusing exponent $\\gamma = 2.0$ and balancing factor $\\alpha = 0.25$. Easy background examples ($p_t \\approx 1$) generate negligible loss ($(1-p_t)^2 \\approx 0$), allowing the network to focus gradient updates on ambiguous drone silhouettes.
+
+### 4.2 Complete Intersection-over-Union Loss ($\\mathcal{L}_{\\text{box}}$)
 Standard MSE/Smooth-L1 losses are scale-dependent, penalizing large bounding boxes disproportionately more than tiny $10 \\times 10\\text{ px}$ drones. **CIoU Loss** enforces scale invariance across three geometric metrics:
 
 $$
@@ -174,15 +185,18 @@ $$
 $$
 
 where $\\rho(\\cdot)$ is Euclidean distance between box center points, $c$ is the diagonal length of the smallest enclosing bounding box, and $v, \\alpha_{\\text{ciou}}$ enforce aspect ratio consistency:
+
 $$
 v = \\frac{4}{\\pi^2}\\left(\\arctan\\frac{w^{\\text{gt}}}{h^{\\text{gt}}} - \\arctan\\frac{w}{h}\\right)^2, \\quad \\alpha_{\\text{ciou}} = \\frac{v}{(1 - \\text{IoU}) + v}
 $$
 
-### 4.3 Label-Smoothed Classification Loss $\\mathcal{L}_{\\text{cls}}$
+### 4.3 Label-Smoothed Classification Loss ($\\mathcal{L}_{\\text{cls}}$)
 To avoid overconfident predictions on hazy, ambiguous drone targets:
+
 $$
 y_k^{\\text{ls}} = (1 - \\epsilon) y_k + \\frac{\\epsilon}{K}, \\quad (\\epsilon = 0.05, K = 1)
 $$
+
 $$
 \\mathcal{L}_{\\text{cls}} = -\\sum_{k=1}^K \\left[ y_k^{\\text{ls}} \\log(\\hat{c}_k) + (1 - y_k^{\\text{ls}}) \\log(1 - \\hat{c}_k) \\right]
 $$
@@ -199,9 +213,12 @@ $$
 
 with batch normalization layers initialized with $\\gamma = 1.0, \\beta = 0.0$.
 """
+    with open("docs/ARCHITECTURE.md", "w", encoding="utf-8", newline="\n") as f:
+        f.write(content.strip() + "\n")
+    print("Written docs/ARCHITECTURE.md successfully!")
 
-def get_benchmarks_doc():
-    return """# 📊 Benchmarks, Ablation Studies & Empirical Evaluation
+def write_benchmarks():
+    content = """# 📊 Benchmarks, Ablation Studies & Empirical Evaluation
 
 This document presents the quantitative evaluation metrics, physical domain ablations, latency profiles, and error diagnosis for small UAV detection under adverse atmospheric conditions across all three prototyped models.
 
@@ -211,7 +228,7 @@ This document presents the quantitative evaluation metrics, physical domain abla
 
 Evaluated on the independent validation partition (360 multi-environment frames, 720 drone instances):
 
-| Model Architecture | Total Params | FLOPs $640 \\times 640$ | Best Val AP@0.50 | Val mAP@0.5:0.95 | Precision | Recall | Real-Time FPS | Training Time |
+| Model Architecture | Total Params | FLOPs ($640 \\times 640$) | Best Val AP@0.50 | Val mAP@0.5:0.95 | Precision | Recall | Real-Time FPS | Training Time |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Model 1: Vanilla Base CNN** (Single-Scale $\\text{P}_3$) | 1.17M | 12.8 G | 88.02% | 49.75% | 94.72% | 89.20% | **186.6 FPS** | 0.31 hrs |
 | **Model 2: DroneNet-FPN** (Multi-Scale $\\text{P}_2/\\text{P}_3/\\text{P}_4$) | 3.87M | 21.6 G | 92.80% | 52.71% | 96.77% | 93.61% | 80.1 FPS | 0.63 hrs |
@@ -223,14 +240,14 @@ Evaluated on the independent validation partition (360 multi-environment frames,
 
 ### 2.1 Impact of High-Resolution $\\text{P}_2$ Scale (Stride 4)
 - **AP@0.50 Improvement**: $+4.78\\%$ (Model 1: $88.02\\% \\rightarrow$ Model 2: $92.80\\%$).
-- **Mathematical Rationale**: In the curated dataset, **51.52% of targets are $< 16\\text{px}$** and **95.42% are $< 32\\text{px}$**. Standard stride-8 or stride-16 feature maps downsample a $12\\text{px}$ drone to a $1.5\\text{px}$ activation, causing spatial feature collapse. The high-resolution $\\text{P}_2$ feature map $160 \\times 160$ provides a $4\\times$ denser spatial sampling grid, preserving microscopic edge boundaries.
+- **Mathematical Rationale**: In the curated dataset, **51.52% of targets are $< 16\\text{px}$** and **95.42% are $< 32\\text{px}$**. Standard stride-8 or stride-16 feature maps downsample a $12\\text{px}$ drone to a $1.5\\text{px}$ activation, causing spatial feature collapse. The high-resolution $\\text{P}_2$ feature map ($160 \\times 160$) provides a $4\\times$ denser spatial sampling grid, preserving microscopic edge boundaries.
 
 ### 2.2 Impact of Directional Coordinate Attention (CA)
 - **Precision Dominance**: Model 3 achieves the highest Precision (**$96.32\\%$**, with peak **$97.01\\%$**).
 - **Physical Rationale**: Under dense fog, atmospheric scattering produces diffuse haze that tricks isotropic convolutions into triggering false positives on rooftop corners, window mullions, and antenna poles. Coordinate Attention decomposes spatial pooling into orthogonal 1D horizontal and vertical positional encodings, filtering out static horizontal background edges and isolating compact airborne drone signatures.
 
 ### 2.3 Impact of Receptive Field Block (RFB)
-- Multi-rate dilated convolutions $r \\in \\{1, 2, 3\\}$ expand the effective receptive field without spatial downsampling, enabling the detector to perceive distant approaching drones while maintaining high-frequency rotor details.
+- Multi-rate dilated convolutions ($r \\in \\{1, 2, 3\\}$) expand the effective receptive field without spatial downsampling, enabling the detector to perceive distant approaching drones while maintaining high-frequency rotor details.
 
 ---
 
@@ -255,8 +272,8 @@ Training time and throughput comparison on NVIDIA Tesla T4 GPUs:
 
 | Execution Mode | Hardware Configuration | Epoch Time | 40-Epoch Training Time | AP@0.50 Convergence |
 | :--- | :--- | :---: | :---: | :---: |
-| **Single GPU (AMP)** | 1x NVIDIA Tesla T4 (16 GB) | $78\\text{ s}$ | $52.0\\text{ min}$ $0.87\\text{ hrs}$ | Epoch 36 |
-| **Dual GPU DDP (AMP)** ⚡ | **2x NVIDIA Tesla T4 (DDP)** | **$44\\text{ s}$** | **$29.4\\text{ min}$ $0.49\\text{ hrs}$** | **Epoch 33** |
+| **Single GPU (AMP)** | 1x NVIDIA Tesla T4 (16 GB) | $78\\text{ s}$ | $52.0\\text{ min}$ ($0.87\\text{ hrs}$) | Epoch 36 |
+| **Dual GPU DDP (AMP)** ⚡ | **2x NVIDIA Tesla T4 (DDP)** | **$44\\text{ s}$** | **$29.4\\text{ min}$ ($0.49\\text{ hrs}$)** | **Epoch 33** |
 | **Speedup Factor** | — | **$1.77\\times$** | **$1.77\\times$** | **Earlier Convergence** |
 
 ---
@@ -271,184 +288,12 @@ Benchmarked on input resolution $640 \\times 640$ with batch size $= 1$:
 | **Model 2: DroneNet-FPN** | $6.8\\text{ ms}$ | $4.4\\text{ ms}$ | $1.28\\text{ ms}$ | **$12.48\\text{ ms}$** | **80.1 FPS** |
 | **Model 3: DroneNet-FPN-Attention** | $7.2\\text{ ms}$ | $4.8\\text{ ms}$ | $1.40\\text{ ms}$ | **$13.40\\text{ ms}$** | **74.6 FPS** |
 """
+    with open("docs/BENCHMARKS_AND_EVALUATION.md", "w", encoding="utf-8", newline="\n") as f:
+        f.write(content.strip() + "\n")
+    print("Written docs/BENCHMARKS_AND_EVALUATION.md successfully!")
 
-def get_getting_started_doc():
-    return """# 🚀 Getting Started & Execution Guide
-
-This document covers installation, environment setup, local training, evaluation, inference, and Docker containerization for the **DroneNet-FPN-Attention** codebase.
-
----
-
-## 1. Environment Setup
-
-### Option A: Local Python Virtual Environment (Windows PowerShell / Linux / macOS)
-```bash
-# 1. Clone repository
-git clone https://github.com/itanium-g/islab-pusan-ai-assignment.git
-cd islab-pusan-ai-assignment
-
-# 2. Create and activate Python virtual environment
-python -m venv venv
-
-# Windows PowerShell:
-.\\venv\\Scripts\\Activate.ps1
-# Linux / macOS / WSL:
-source venv/bin/activate
-
-# 3. Install core dependencies
-pip install -r requirements.txt
-```
-
-### Option B: WSL2 Ubuntu Environment
-```bash
-wsl -d Ubuntu
-cd /mnt/c/Users/<YOUR_USERNAME>/projects/islab-pusan-ai-assignment
-python3 -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-```
-
-### Option C: Docker & Docker Compose
-```bash
-# Build CUDA container and run training
-docker compose -f docker/docker-compose.yml up train
-
-# Run evaluation container
-docker compose -f docker/docker-compose.yml up evaluate
-```
-
----
-
-## 2. Dataset Setup & Preprocessing
-
-The raw dataset contains 2,400 multi-weather UAV frames (120 flight sequences) available on Google Drive:
-- **Download Link**: [Dataset Drone (10 GB)](https://drive.google.com/file/d/19L9yUP62xMESJMw6srf5HGcL8s5b0gv8/view?usp=sharing)
-- Extract dataset into `curated_datasets/obj_det_base/`.
-
-### 2.1 Sequence-Aware Dataset Split
-To prevent temporal video frame leakage, split the dataset by video sequences:
-```bash
-python scripts/split_dataset.py --dataset-dir curated_datasets/obj_det_base --output-dir data/splits
-```
-
-### 2.2 High-Speed 640x640 Pre-Caching (Reduces Epoch Time from 3 min to 3s!)
-```bash
-python scripts/preprocess_dataset.py --src-dir curated_datasets/obj_det_base --dest-dir data/cached_640 --img-size 640 --workers 8
-```
-
----
-
-## 3. Model Training
-
-### Train Proposed Best Model (Model 3: DroneNet-FPN-Attention)
-```bash
-# Single GPU / Local CPU
-python train.py --config configs/model3_fpn_attn.yaml --epochs 40 --batch-size 16
-
-# Multi-GPU DistributedDataParallel (DDP) across 2 GPUs
-torchrun --nproc_per_node=2 train.py --config configs/model3_fpn_attn.yaml --ddp
-```
-
-### Train Baseline Models (Ablation Benchmark)
-```bash
-# Model 1: Vanilla Base CNN (Single Scale P3)
-python train.py --config configs/model1_baseline.yaml --epochs 30 --batch-size 16
-
-# Model 2: DroneNet-FPN (Multi-Scale P2/P3/P4)
-python train.py --config configs/model2_fpn.yaml --epochs 35 --batch-size 16
-```
-
----
-
-## 4. Evaluation & Benchmarking
-
-```bash
-# Evaluate Best Model on Test Partition
-python evaluate.py --config configs/model3_fpn_attn.yaml --weights runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --split test
-```
-
----
-
-## 5. Visual Inference & Sample Renders
-
-```bash
-# Run visual inference and generate bounding-box renders
-python infer.py --weights weights/DroneNet-FPN-Attention_inference.pth --source curated_datasets/obj_det_base/augmented_raw_dataset_city_foggy_city_foggy_0_1_sequence.164_step0.camera.png --output-dir runs/infer --conf-thresh 0.35
-```
-
----
-
-## 6. Weight Export & Paper Compilation
-
-```bash
-# Export lightweight stripped weights (< 15 MB), ONNX, and TorchScript
-python scripts/export_weights.py --config configs/model3_fpn_attn.yaml --checkpoint runs/train/model3_fpn_attention_best/checkpoints/best_model.pth --output-dir weights
-
-# Compile publication-grade IEEE Conference Paper PDF
-python scripts/compile_paper.py
-```
-
----
-
-## 7. Running Unit Tests
-
-```bash
-python -m unittest discover -s tests -p "test_*.py"
-```
-"""
-
-def get_kaggle_doc():
-    return """# ☁️ Kaggle Dual-GPU Distributed Training Guide
-
-This guide details how to launch, monitor, and retrieve results from the automated **Dual NVIDIA Tesla T4 DDP** training pipeline on Kaggle.
-
----
-
-## 1. Overview & Cloud Architecture
-
-- **Kernel URL**: [https://www.kaggle.com/code/itanium/drone-detection-islab-dual-gpu](https://www.kaggle.com/code/itanium/drone-detection-islab-dual-gpu)
-- **Accelerator**: `NvidiaTeslaT4` (Dual Tesla T4 GPUs, 2x 16 GB VRAM)
-- **Engine**: PyTorch `torchrun` DistributedDataParallel (DDP) with Automatic Mixed Precision (AMP)
-- **Dataset Source**: Automatically downloaded from Google Drive (`19L9yUP62xMESJMw6srf5HGcL8s5b0gv8`) and extracted to `/tmp`
-
----
-
-## 2. Command-Line Interface (CLI) Execution
-
-### 2.1 Rebuild Self-Contained Notebook
-```powershell
-python scripts/build_kaggle_notebook.py
-```
-
-### 2.2 Push & Launch on Kaggle Dual Tesla T4
-```powershell
-.\\venv\\Scripts\\kaggle.exe kernels push -p notebooks --accelerator NvidiaTeslaT4
-```
-
-### 2.3 Monitor Live Execution Status
-```powershell
-.\\venv\\Scripts\\kaggle.exe kernels status itanium/drone-detection-islab-dual-gpu
-```
-
-### 2.4 Download Generated Output Artifacts
-Once status reaches `"complete"`, download all model weights, evaluation plots, and the compiled IEEE Paper PDF:
-```powershell
-.\\venv\\Scripts\\kaggle.exe kernels output itanium/drone-detection-islab-dual-gpu -p kaggle_output
-```
-
----
-
-## 3. Generated Output Deliverables
-
-Upon completion, Kaggle produces the following lightweight outputs (< 15 MB total):
-- `weights/DroneNet-FPN-Attention_inference.pth` (Stripped inference weights, 16.6 MB)
-- `weights/DroneNet-FPN-Attention.onnx` (ONNX computational graph)
-- `weights/DroneNet-FPN-Attention.torchscript.pt` (TorchScript traced model)
-- `runs/eval/` (Evaluation metrics, PR curves, Confusion Matrices)
-- `paper/Drone_Detection_Paper.pdf` (Compiled IEEE Conference Paper)
-"""
-
-def get_readme_doc():
-    return """# 🛸 DroneNet-FPN-Attention: A Lightweight Multi-Scale Receptive-Field Attention Network for Scratch UAV Detection Under Adverse Atmospheric Conditions
+def write_readme():
+    content = """# 🛸 DroneNet-FPN-Attention: A Lightweight Multi-Scale Receptive-Field Attention Network for Scratch UAV Detection Under Adverse Atmospheric Conditions
 
 [![Author](https://img.shields.io/badge/Author-Ghiffari_Ahmadijaya-blue.svg)](https://github.com/itanium-g)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white)](https://github.com/itanium-g/islab-pusan-ai-assignment)
@@ -476,7 +321,7 @@ For exhaustive technical details, please consult our specialized documentation g
 
 | Document | Description |
 | :--- | :--- |
-| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN $\\text{P}_2/\\text{P}_3/\\text{P}_4$, Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
+| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN ($\\text{P}_2/\\text{P}_3/\\text{P}_4$), Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
 | ☁️ [**Kaggle Dual-GPU Guide**](docs/KAGGLE_DUAL_GPU_GUIDE.md) | DistributedDataParallel (DDP) on Dual Tesla T4 GPUs, CLI `--accelerator NvidiaTeslaT4`, auto-downloading Google Drive |
 | 🚀 [**Getting Started & Setup**](docs/GETTING_STARTED.md) | Local (PowerShell/Linux/macOS), WSL2 Ubuntu, Docker containerization, dataset preprocessing, and inference |
 | 📊 [**Benchmarks & Ablations**](docs/BENCHMARKS_AND_EVALUATION.md) | Quantitative comparison (Model 1 vs 2 vs 3), environmental domain robustness, latency analysis |
@@ -568,21 +413,12 @@ python scripts/export_weights.py --config configs/model3_fpn_attn.yaml --checkpo
   python scripts/compile_paper.py
   ```
 """
-
-def main():
-    os.makedirs("docs", exist_ok=True)
-    mapping = {
-        "docs/ARCHITECTURE.md": get_architecture_doc(),
-        "docs/BENCHMARKS_AND_EVALUATION.md": get_benchmarks_doc(),
-        "docs/GETTING_STARTED.md": get_getting_started_doc(),
-        "docs/KAGGLE_DUAL_GPU_GUIDE.md": get_kaggle_doc(),
-        "README.md": get_readme_doc()
-    }
-    for path, content in mapping.items():
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(content.strip() + "\n")
-        print(f"Generated {path}")
-    print("All documentation generated successfully!")
+    with open("README.md", "w", encoding="utf-8", newline="\n") as f:
+        f.write(content.strip() + "\n")
+    print("Written README.md successfully!")
 
 if __name__ == "__main__":
-    main()
+    write_architecture()
+    write_benchmarks()
+    write_readme()
+    print("All documents written cleanly!")

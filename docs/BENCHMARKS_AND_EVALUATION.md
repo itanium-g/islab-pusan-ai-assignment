@@ -8,7 +8,7 @@ This document presents the quantitative evaluation metrics, physical domain abla
 
 Evaluated on the independent validation partition (360 multi-environment frames, 720 drone instances):
 
-| Model Architecture | Total Params | FLOPs $640 \times 640$ | Best Val AP@0.50 | Val mAP@0.5:0.95 | Precision | Recall | Real-Time FPS | Training Time |
+| Model Architecture | Total Params | FLOPs ($640 \times 640$) | Best Val AP@0.50 | Val mAP@0.5:0.95 | Precision | Recall | Real-Time FPS | Training Time |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Model 1: Vanilla Base CNN** (Single-Scale $\text{P}_3$) | 1.17M | 12.8 G | 88.02% | 49.75% | 94.72% | 89.20% | **186.6 FPS** | 0.31 hrs |
 | **Model 2: DroneNet-FPN** (Multi-Scale $\text{P}_2/\text{P}_3/\text{P}_4$) | 3.87M | 21.6 G | 92.80% | 52.71% | 96.77% | 93.61% | 80.1 FPS | 0.63 hrs |
@@ -20,14 +20,14 @@ Evaluated on the independent validation partition (360 multi-environment frames,
 
 ### 2.1 Impact of High-Resolution $\text{P}_2$ Scale (Stride 4)
 - **AP@0.50 Improvement**: $+4.78\%$ (Model 1: $88.02\% \rightarrow$ Model 2: $92.80\%$).
-- **Mathematical Rationale**: In the curated dataset, **51.52% of targets are $< 16\text{px}$** and **95.42% are $< 32\text{px}$**. Standard stride-8 or stride-16 feature maps downsample a $12\text{px}$ drone to a $1.5\text{px}$ activation, causing spatial feature collapse. The high-resolution $\text{P}_2$ feature map $160 \times 160$ provides a $4\times$ denser spatial sampling grid, preserving microscopic edge boundaries.
+- **Mathematical Rationale**: In the curated dataset, **51.52% of targets are $< 16\text{px}$** and **95.42% are $< 32\text{px}$**. Standard stride-8 or stride-16 feature maps downsample a $12\text{px}$ drone to a $1.5\text{px}$ activation, causing spatial feature collapse. The high-resolution $\text{P}_2$ feature map ($160 \times 160$) provides a $4\times$ denser spatial sampling grid, preserving microscopic edge boundaries.
 
 ### 2.2 Impact of Directional Coordinate Attention (CA)
 - **Precision Dominance**: Model 3 achieves the highest Precision (**$96.32\%$**, with peak **$97.01\%$**).
 - **Physical Rationale**: Under dense fog, atmospheric scattering produces diffuse haze that tricks isotropic convolutions into triggering false positives on rooftop corners, window mullions, and antenna poles. Coordinate Attention decomposes spatial pooling into orthogonal 1D horizontal and vertical positional encodings, filtering out static horizontal background edges and isolating compact airborne drone signatures.
 
 ### 2.3 Impact of Receptive Field Block (RFB)
-- Multi-rate dilated convolutions $r \in \{1, 2, 3\}$ expand the effective receptive field without spatial downsampling, enabling the detector to perceive distant approaching drones while maintaining high-frequency rotor details.
+- Multi-rate dilated convolutions ($r \in \{1, 2, 3\}$) expand the effective receptive field without spatial downsampling, enabling the detector to perceive distant approaching drones while maintaining high-frequency rotor details.
 
 ---
 
@@ -52,8 +52,8 @@ Training time and throughput comparison on NVIDIA Tesla T4 GPUs:
 
 | Execution Mode | Hardware Configuration | Epoch Time | 40-Epoch Training Time | AP@0.50 Convergence |
 | :--- | :--- | :---: | :---: | :---: |
-| **Single GPU (AMP)** | 1x NVIDIA Tesla T4 (16 GB) | $78\text{ s}$ | $52.0\text{ min}$ $0.87\text{ hrs}$ | Epoch 36 |
-| **Dual GPU DDP (AMP)** ⚡ | **2x NVIDIA Tesla T4 (DDP)** | **$44\text{ s}$** | **$29.4\text{ min}$ $0.49\text{ hrs}$** | **Epoch 33** |
+| **Single GPU (AMP)** | 1x NVIDIA Tesla T4 (16 GB) | $78\text{ s}$ | $52.0\text{ min}$ ($0.87\text{ hrs}$) | Epoch 36 |
+| **Dual GPU DDP (AMP)** ⚡ | **2x NVIDIA Tesla T4 (DDP)** | **$44\text{ s}$** | **$29.4\text{ min}$ ($0.49\text{ hrs}$)** | **Epoch 33** |
 | **Speedup Factor** | — | **$1.77\times$** | **$1.77\times$** | **Earlier Convergence** |
 
 ---
