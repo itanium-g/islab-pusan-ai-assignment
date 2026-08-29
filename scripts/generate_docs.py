@@ -24,7 +24,7 @@ Small UAV object detection presents extreme physical and mathematical bottleneck
 
 ### 1.1 Target Scale Collapse at Deep Strides
 Analysis of the 2,400 curated frames (4,800 drone instances) reveals:
-- A $12 \\times 12\\text{ px}$ drone on a standard $640 \\times 640$ input downsampled to Stride 32 ($\\text{P}_5$) is reduced to a fractional sub-pixel dimension ($0.375 \\times 0.375\\text{ px}$), resulting in complete feature collapse.
+- A $12 \\times 12\\text{ px}$ drone on a standard $640 \\times 640$ input downsampled to Stride 32 $\\text{P}_5$ is reduced to a fractional sub-pixel dimension $0.375 \\times 0.375\\text{ px}$, resulting in complete feature collapse.
 - Our proposed **High-Resolution Feature Pyramid Network (HR-FPN)** retains **$\\text{P}_2$ (Stride 4, $160 \\times 160$)**, preserving a $3 \\times 3\\text{ px}$ feature grid for even the smallest targets.
 
 ### 1.2 Atmospheric Optical Degradation
@@ -44,16 +44,16 @@ We designed and evaluated three progressively sophisticated neural architectures
 | :--- | :--- | :--- | :--- |
 | **Design Paradigm** | Single-Scale Baseline | Multi-Scale Feature Pyramid | High-Res FPN + Receptive Attention |
 | **Backbone Network** | 4-Stage Plain ConvNet | 4-Stage Residual ConvNet | 4-Stage Residual Backbone ($\\text{C}_1$–$\\text{C}_4$) |
-| **Multi-Scale Neck** | ❌ None (Single $\\text{P}_3$) | ✅ Top-Down FPN ($\\text{P}_2, \\text{P}_3, \\text{P}_4$) | ✅ High-Res FPN with Lateral Convs |
-| **Spatial Strides** | Stride 8 ($80 \\times 80$) | Strides 4, 8, 16 | Strides 4, 8, 16 ($160 \\times 160, 80 \\times 80, 40 \\times 40$) |
+| **Multi-Scale Neck** | ❌ None (Single $\\text{P}_3$) | ✅ Top-Down FPN $\\text{P}_2, \\text{P}_3, \\text{P}_4$ | ✅ High-Res FPN with Lateral Convs |
+| **Spatial Strides** | Stride 8 $80 \\times 80$ | Strides 4, 8, 16 | Strides 4, 8, 16 $160 \\times 160, 80 \\times 80, 40 \\times 40$ |
 | **Spatial Attention** | ❌ None | ❌ None | ✅ Directional Coordinate Attention (CA) |
 | **Contextual Expansion**| ❌ Standard Conv | ❌ Standard Conv | ✅ Receptive Field Block (RFB, $r \\in \\{1,2,3\\}$) |
 | **Head Architecture** | Coupled ConvHead | Shared FPN Heads | Decoupled Classification & Regression Heads |
 | **Anchor Calibration** | 3 anchors at Stride 8 | 9 anchors (3 per scale) | 9 calibrated multi-scale anchors |
-| **Loss Formulation** | Smooth L1 + BCE | CIoU + Focal Loss | Focal ($\\gamma=2, \\alpha=0.25$) + CIoU + Label-Smooth CE |
-| **Total Parameters** | **1.17M** ($1,173,040$) | **3.87M** ($3,869,456$) | **4.12M** ($4,124,240$) |
-| **FLOPs ($640 \\times 640$)**| **12.8 GFLOPs** | **21.6 GFLOPs** | **24.8 GFLOPs** |
-| **Inference Latency** | **186.6 FPS** ($5.36\\text{ ms}$) | **80.1 FPS** ($12.48\\text{ ms}$) | **74.6 FPS** ($13.40\\text{ ms}$) |
+| **Loss Formulation** | Smooth L1 + BCE | CIoU + Focal Loss | Focal $\\gamma=2, \\alpha=0.25$ + CIoU + Label-Smooth CE |
+| **Total Parameters** | **1.17M** 1.17M $1,173,040$ | **3.87M** 3.87M $3,869,456$ | **4.12M** 4.12M $4,124,240$ |
+| **FLOPs $640 \\times 640$**| **12.8 GFLOPs** | **21.6 GFLOPs** | **24.8 GFLOPs** |
+| **Inference Latency** | **186.6 FPS** $5.36\\text{ ms}$ | **80.1 FPS** $12.48\\text{ ms}$ | **74.6 FPS** $13.40\\text{ ms}$ |
 | **Val AP@0.50** | **88.02%** | **92.80%** | **92.38%** |
 | **Precision** | **94.72%** | **96.77%** | **96.32%** (Peak **97.01%**) |
 | **Recall** | **89.20%** | **93.61%** | **93.04%** |
@@ -100,14 +100,14 @@ We designed and evaluated three progressively sophisticated neural architectures
 ```
 
 ### 3.1 High-Resolution Feature Pyramid Network (HR-FPN)
-Standard FPN architectures construct pyramids at strides $\\{8, 16, 32\\}$ ($\\text{P}_3, \\text{P}_4, \\text{P}_5$). In small drone detection, $\\text{P}_5$ contains zero informative signal. We replace $\\text{P}_5$ with high-resolution $\\text{P}_2$:
+Standard FPN architectures construct pyramids at strides $\\{8, 16, 32\\}$ $\\text{P}_3, \\text{P}_4, \\text{P}_5$. In small drone detection, $\\text{P}_5$ contains zero informative signal. We replace $\\text{P}_5$ with high-resolution $\\text{P}_2$:
 
-- **$\\text{P}_2$ (Stride 4, Resolution $160 \\times 160$)**: Dedicated to microscopic drones ($4\\text{px} - 24\\text{px}$). Preserves rotor edge gradients and landing gear silhouettes.
-- **$\\text{P}_3$ (Stride 8, Resolution $80 \\times 80$)**: Dedicated to medium-scale drones ($24\\text{px} - 64\\text{px}$). Balances context and localization precision.
-- **$\\text{P}_4$ (Stride 16, Resolution $40 \\times 40$)**: Dedicated to close-range UAVs ($> 64\\text{px}$). Captures global airframe structure.
+- **$\\text{P}_2$ (Stride 4, Resolution $160 \\times 160$)**: Dedicated to microscopic drones $4\\text{px} - 24\\text{px}$. Preserves rotor edge gradients and landing gear silhouettes.
+- **$\\text{P}_3$ (Stride 8, Resolution $80 \\times 80$)**: Dedicated to medium-scale drones $24\\text{px} - 64\\text{px}$. Balances context and localization precision.
+- **$\\text{P}_4$ (Stride 16, Resolution $40 \\times 40$)**: Dedicated to close-range UAVs $> 64\\text{px}$. Captures global airframe structure.
 
 ### 3.2 Directional Coordinate Attention (CA)
-Standard Squeeze-and-Excitation (SE) attention performs 2D global spatial average pooling, discarding exact spatial coordinates. **Coordinate Attention** decomposes 2D pooling into two orthogonal 1D spatial pooling operations along the horizontal ($X$) and vertical ($Y$) axes:
+Standard Squeeze-and-Excitation (SE) attention performs 2D global spatial average pooling, discarding exact spatial coordinates. **Coordinate Attention** decomposes 2D pooling into two orthogonal 1D spatial pooling operations along the horizontal $X$ and vertical $Y$ axes:
 
 $$
 \\mathbf{z}_c^h(h) = \\frac{1}{W} \\sum_{i=0}^{W-1} x_c(h, i), \\quad \\mathbf{z}_c^w(w) = \\frac{1}{H} \\sum_{j=0}^{H-1} x_c(j, w)
@@ -119,7 +119,7 @@ $$
    $$
    where $\\delta$ is the Non-Linear Hard-Swish activation and reduction ratio $r = 16$.
 2. The intermediate tensor $\\mathbf{f} \\in \\mathbb{R}^{C/r \\times (H+W)}$ is split back into $\\mathbf{f}^h \\in \\mathbb{R}^{C/r \\times H}$ and $\\mathbf{f}^w \\in \\mathbb{R}^{C/r \\times W}$.
-3. Two independent $1 \\times 1$ convolutions and sigmoid ($\\sigma$) activations generate coordinate attention weight maps:
+3. Two independent $1 \\times 1$ convolutions and sigmoid $\\sigma$ activations generate coordinate attention weight maps:
    $$
    \\mathbf{g}^h = \\sigma\\left(\\text{Conv}_h(\\mathbf{f}^h)\right), \\quad \\mathbf{g}^w = \\sigma\\left(\\text{Conv}_w(\\mathbf{f}^w)\right)
    $$
@@ -129,7 +129,7 @@ $$
    $$
 
 ### 3.3 Receptive Field Block (RFB)
-The RFB module applies multi-branch dilated convolutions ($r \\in \\{1, 2, 3\\}$) simulating the human visual receptive field:
+The RFB module applies multi-branch dilated convolutions $r \\in \\{1, 2, 3\\}$ simulating the human visual receptive field:
 - **Branch 1**: $1 \\times 1\\text{ Conv}$ (Identity shortcut)
 - **Branch 2**: $1 \\times 1\\text{ Conv} \\rightarrow 3 \\times 3\\text{ Conv}$ (Rate $r=1$)
 - **Branch 3**: $1 \\times 1\\text{ Conv} \\rightarrow 3 \\times 3\\text{ Conv} \\rightarrow 3 \\times 3\\text{ Dilated Conv}$ (Rate $r=2$)
@@ -159,14 +159,14 @@ where calibrated loss weights are $\\lambda_{\\text{obj}} = 1.2, \\lambda_{\\tex
  Handles 10,000:1 Imbalance      Scale-Invariant Localization     Prevents Overconfidence
 ```
 
-### 4.1 Focal Objectness Loss ($\\mathcal{L}_{\\text{obj}}$)
+### 4.1 Focal Objectness Loss $\\mathcal{L}_{\\text{obj}}$
 To prevent overwhelming gradient dominance from $> 10,000$ negative background cells:
 $$
 \\mathcal{L}_{\\text{obj}} = -\\alpha_t (1 - p_t)^\\gamma \\log(p_t)
 $$
-with focusing exponent $\\gamma = 2.0$ and balancing factor $\\alpha = 0.25$. Easy background examples ($p_t \\approx 1$) generate negligible loss ($(1-p_t)^2 \\approx 0$), allowing the network to focus gradient updates on ambiguous drone silhouettes.
+with focusing exponent $\\gamma = 2.0$ and balancing factor $\\alpha = 0.25$. Easy background examples $p_t \\approx 1$ generate negligible loss $(1-p_t)^2 \\approx 0$, allowing the network to focus gradient updates on ambiguous drone silhouettes.
 
-### 4.2 Complete Intersection-over-Union Loss ($\\mathcal{L}_{\\text{box}}$)
+### 4.2 Complete Intersection-over-Union Loss $\\mathcal{L}_{\\text{box}}$
 Standard MSE/Smooth-L1 losses are scale-dependent, penalizing large bounding boxes disproportionately more than tiny $10 \\times 10\\text{ px}$ drones. **CIoU Loss** enforces scale invariance across three geometric metrics:
 
 $$
@@ -178,7 +178,7 @@ $$
 v = \\frac{4}{\\pi^2}\\left(\\arctan\\frac{w^{\\text{gt}}}{h^{\\text{gt}}} - \\arctan\\frac{w}{h}\\right)^2, \\quad \\alpha_{\\text{ciou}} = \\frac{v}{(1 - \\text{IoU}) + v}
 $$
 
-### 4.3 Label-Smoothed Classification Loss ($\\mathcal{L}_{\\text{cls}}$)
+### 4.3 Label-Smoothed Classification Loss $\\mathcal{L}_{\\text{cls}}$
 To avoid overconfident predictions on hazy, ambiguous drone targets:
 $$
 y_k^{\\text{ls}} = (1 - \\epsilon) y_k + \\frac{\\epsilon}{K}, \\quad (\\epsilon = 0.05, K = 1)
@@ -211,7 +211,7 @@ This document presents the quantitative evaluation metrics, physical domain abla
 
 Evaluated on the independent validation partition (360 multi-environment frames, 720 drone instances):
 
-| Model Architecture | Total Params | FLOPs ($640 \\times 640$) | Best Val AP@0.50 | Val mAP@0.5:0.95 | Precision | Recall | Real-Time FPS | Training Time |
+| Model Architecture | Total Params | FLOPs $640 \\times 640$ | Best Val AP@0.50 | Val mAP@0.5:0.95 | Precision | Recall | Real-Time FPS | Training Time |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Model 1: Vanilla Base CNN** (Single-Scale $\\text{P}_3$) | 1.17M | 12.8 G | 88.02% | 49.75% | 94.72% | 89.20% | **186.6 FPS** | 0.31 hrs |
 | **Model 2: DroneNet-FPN** (Multi-Scale $\\text{P}_2/\\text{P}_3/\\text{P}_4$) | 3.87M | 21.6 G | 92.80% | 52.71% | 96.77% | 93.61% | 80.1 FPS | 0.63 hrs |
@@ -223,14 +223,14 @@ Evaluated on the independent validation partition (360 multi-environment frames,
 
 ### 2.1 Impact of High-Resolution $\\text{P}_2$ Scale (Stride 4)
 - **AP@0.50 Improvement**: $+4.78\\%$ (Model 1: $88.02\\% \\rightarrow$ Model 2: $92.80\\%$).
-- **Mathematical Rationale**: In the curated dataset, **51.52% of targets are $< 16\\text{px}$** and **95.42% are $< 32\\text{px}$**. Standard stride-8 or stride-16 feature maps downsample a $12\\text{px}$ drone to a $1.5\\text{px}$ activation, causing spatial feature collapse. The high-resolution $\\text{P}_2$ feature map ($160 \\times 160$) provides a $4\\times$ denser spatial sampling grid, preserving microscopic edge boundaries.
+- **Mathematical Rationale**: In the curated dataset, **51.52% of targets are $< 16\\text{px}$** and **95.42% are $< 32\\text{px}$**. Standard stride-8 or stride-16 feature maps downsample a $12\\text{px}$ drone to a $1.5\\text{px}$ activation, causing spatial feature collapse. The high-resolution $\\text{P}_2$ feature map $160 \\times 160$ provides a $4\\times$ denser spatial sampling grid, preserving microscopic edge boundaries.
 
 ### 2.2 Impact of Directional Coordinate Attention (CA)
 - **Precision Dominance**: Model 3 achieves the highest Precision (**$96.32\\%$**, with peak **$97.01\\%$**).
 - **Physical Rationale**: Under dense fog, atmospheric scattering produces diffuse haze that tricks isotropic convolutions into triggering false positives on rooftop corners, window mullions, and antenna poles. Coordinate Attention decomposes spatial pooling into orthogonal 1D horizontal and vertical positional encodings, filtering out static horizontal background edges and isolating compact airborne drone signatures.
 
 ### 2.3 Impact of Receptive Field Block (RFB)
-- Multi-rate dilated convolutions ($r \\in \\{1, 2, 3\\}$) expand the effective receptive field without spatial downsampling, enabling the detector to perceive distant approaching drones while maintaining high-frequency rotor details.
+- Multi-rate dilated convolutions $r \\in \\{1, 2, 3\\}$ expand the effective receptive field without spatial downsampling, enabling the detector to perceive distant approaching drones while maintaining high-frequency rotor details.
 
 ---
 
@@ -255,8 +255,8 @@ Training time and throughput comparison on NVIDIA Tesla T4 GPUs:
 
 | Execution Mode | Hardware Configuration | Epoch Time | 40-Epoch Training Time | AP@0.50 Convergence |
 | :--- | :--- | :---: | :---: | :---: |
-| **Single GPU (AMP)** | 1x NVIDIA Tesla T4 (16 GB) | $78\\text{ s}$ | $52.0\\text{ min}$ ($0.87\\text{ hrs}$) | Epoch 36 |
-| **Dual GPU DDP (AMP)** ⚡ | **2x NVIDIA Tesla T4 (DDP)** | **$44\\text{ s}$** | **$29.4\\text{ min}$ ($0.49\\text{ hrs}$)** | **Epoch 33** |
+| **Single GPU (AMP)** | 1x NVIDIA Tesla T4 (16 GB) | $78\\text{ s}$ | $52.0\\text{ min}$ $0.87\\text{ hrs}$ | Epoch 36 |
+| **Dual GPU DDP (AMP)** ⚡ | **2x NVIDIA Tesla T4 (DDP)** | **$44\\text{ s}$** | **$29.4\\text{ min}$ $0.49\\text{ hrs}$** | **Epoch 33** |
 | **Speedup Factor** | — | **$1.77\\times$** | **$1.77\\times$** | **Earlier Convergence** |
 
 ---
@@ -476,7 +476,7 @@ For exhaustive technical details, please consult our specialized documentation g
 
 | Document | Description |
 | :--- | :--- |
-| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN ($\\text{P}_2/\\text{P}_3/\\text{P}_4$), Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
+| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN $\\text{P}_2/\\text{P}_3/\\text{P}_4$, Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
 | ☁️ [**Kaggle Dual-GPU Guide**](docs/KAGGLE_DUAL_GPU_GUIDE.md) | DistributedDataParallel (DDP) on Dual Tesla T4 GPUs, CLI `--accelerator NvidiaTeslaT4`, auto-downloading Google Drive |
 | 🚀 [**Getting Started & Setup**](docs/GETTING_STARTED.md) | Local (PowerShell/Linux/macOS), WSL2 Ubuntu, Docker containerization, dataset preprocessing, and inference |
 | 📊 [**Benchmarks & Ablations**](docs/BENCHMARKS_AND_EVALUATION.md) | Quantitative comparison (Model 1 vs 2 vs 3), environmental domain robustness, latency analysis |
@@ -487,8 +487,8 @@ For exhaustive technical details, please consult our specialized documentation g
 
 | Requirement / Bonus Dimension | Implementation & Solution in this Repository | Status |
 | :--- | :--- | :---: |
-| **1. Vanilla Model Prototyping (From Scratch)** | Designed 3 custom PyTorch models strictly from random initialization ($\\mathcal{N}(0, \\sqrt{2/\\text{fan-in}})$) with **zero pretrained weights**. | ✅ **100% Fulfilled** |
-| **2. Custom Loss/Objective Function** | Formulated composite loss: **Focal Objectness ($\\gamma=2.0, \\alpha=0.25$) + Complete-IoU (CIoU) + Label-Smoothed Cross-Entropy ($\\epsilon=0.05$)**. | ✅ **100% Fulfilled** |
+| **1. Vanilla Model Prototyping (From Scratch)** | Designed 3 custom PyTorch models strictly from random initialization $\\mathcal{N}(0, \\sqrt{2/\\text{fan-in}})$ with **zero pretrained weights**. | ✅ **100% Fulfilled** |
+| **2. Custom Loss/Objective Function** | Formulated composite loss: **Focal Objectness $\\gamma=2.0, \\alpha=0.25$ + Complete-IoU (CIoU) + Label-Smoothed Cross-Entropy $\\epsilon=0.05$**. | ✅ **100% Fulfilled** |
 | **3. Multi-Aspect Evaluation & Tuning** | Exhaustive ablation across 3 models, 5 environmental domains (Foggy, Sunny, City, Forest, Lake), small-target scale analysis ($<16\\text{px}$ vs $<32\\text{px}$), AP@0.5, mAP@0.5:0.95, Precision, Recall, and FPS. | ✅ **100% Fulfilled** |
 | **4. Training Tracking Tools** | Integrated **TensorBoard** and **Weights & Biases (W&B)** in `src/utils/logger.py` for scalar telemetry, PR curves, and live loss dashboards. | ✅ **100% Fulfilled** |
 | **5. Multi-GPU Distributed Training (Bonus)** ⚡ | Implemented `torchrun` **DistributedDataParallel (DDP)** across **Dual Tesla T4 GPUs** on Kaggle, converging in **0.49 hours** (29.4 min). | 🏆 **Bonus Earned** |

@@ -26,7 +26,7 @@ For exhaustive technical details, please consult our specialized documentation g
 
 | Document | Description |
 | :--- | :--- |
-| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN ($\text{P}_2/\text{P}_3/\text{P}_4$), Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
+| 📖 [**Architecture & Theory**](docs/ARCHITECTURE.md) | High-Resolution FPN $\text{P}_2/\text{P}_3/\text{P}_4$, Coordinate Attention, Receptive Field Block (RFB), CIoU & Focal Loss math |
 | ☁️ [**Kaggle Dual-GPU Guide**](docs/KAGGLE_DUAL_GPU_GUIDE.md) | DistributedDataParallel (DDP) on Dual Tesla T4 GPUs, CLI `--accelerator NvidiaTeslaT4`, auto-downloading Google Drive |
 | 🚀 [**Getting Started & Setup**](docs/GETTING_STARTED.md) | Local (PowerShell/Linux/macOS), WSL2 Ubuntu, Docker containerization, dataset preprocessing, and inference |
 | 📊 [**Benchmarks & Ablations**](docs/BENCHMARKS_AND_EVALUATION.md) | Quantitative comparison (Model 1 vs 2 vs 3), environmental domain robustness, latency analysis |
@@ -37,8 +37,8 @@ For exhaustive technical details, please consult our specialized documentation g
 
 | Requirement / Bonus Dimension | Implementation & Solution in this Repository | Status |
 | :--- | :--- | :---: |
-| **1. Vanilla Model Prototyping (From Scratch)** | Designed 3 custom PyTorch models strictly from random initialization ($\mathcal{N}(0, \sqrt{2/\text{fan-in}})$) with **zero pretrained weights**. | ✅ **100% Fulfilled** |
-| **2. Custom Loss/Objective Function** | Formulated composite loss: **Focal Objectness ($\gamma=2.0, \alpha=0.25$) + Complete-IoU (CIoU) + Label-Smoothed Cross-Entropy ($\epsilon=0.05$)**. | ✅ **100% Fulfilled** |
+| **1. Vanilla Model Prototyping (From Scratch)** | Designed 3 custom PyTorch models strictly from random initialization $\mathcal{N}(0, \sqrt{2/\text{fan-in}})$ with **zero pretrained weights**. | ✅ **100% Fulfilled** |
+| **2. Custom Loss/Objective Function** | Formulated composite loss: **Focal Objectness $\gamma=2.0, \alpha=0.25$ + Complete-IoU (CIoU) + Label-Smoothed Cross-Entropy $\epsilon=0.05$**. | ✅ **100% Fulfilled** |
 | **3. Multi-Aspect Evaluation & Tuning** | Exhaustive ablation across 3 models, 5 environmental domains (Foggy, Sunny, City, Forest, Lake), small-target scale analysis ($<16\text{px}$ vs $<32\text{px}$), AP@0.5, mAP@0.5:0.95, Precision, Recall, and FPS. | ✅ **100% Fulfilled** |
 | **4. Training Tracking Tools** | Integrated **TensorBoard** and **Weights & Biases (W&B)** in `src/utils/logger.py` for scalar telemetry, PR curves, and live loss dashboards. | ✅ **100% Fulfilled** |
 | **5. Multi-GPU Distributed Training (Bonus)** ⚡ | Implemented `torchrun` **DistributedDataParallel (DDP)** across **Dual Tesla T4 GPUs** on Kaggle, converging in **0.49 hours** (29.4 min). | 🏆 **Bonus Earned** |

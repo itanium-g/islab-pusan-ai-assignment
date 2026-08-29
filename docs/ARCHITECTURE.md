@@ -21,13 +21,13 @@ Small UAV object detection presents extreme physical and mathematical bottleneck
 
 ### 1.1 Target Scale Collapse at Deep Strides
 Analysis of the 2,400 curated frames (4,800 drone instances) reveals:
-- A $12 \times 12\text{ px}$ drone on a standard $640 \times 640$ input downsampled to Stride 32 ($\text{P}_5$) is reduced to a fractional sub-pixel dimension ($0.375 \times 0.375\text{ px}$), resulting in complete feature collapse.
+- A $12 \times 12\text{ px}$ drone on a standard $640 \times 640$ input downsampled to Stride 32 $\text{P}_5$ is reduced to a fractional sub-pixel dimension $0.375 \times 0.375\text{ px}$, resulting in complete feature collapse.
 - Our proposed **High-Resolution Feature Pyramid Network (HR-FPN)** retains **$\text{P}_2$ (Stride 4, $160 \times 160$)**, preserving a $3 \times 3\text{ px}$ feature grid for even the smallest targets.
 
 ### 1.2 Atmospheric Optical Degradation
 Atmospheric scattering follows Koschmieder's Law:
 $$
-I(x) = J(x)e^{-\beta d(x)} + A\left(1 - e^{-\beta d(x)}\right)
+I(x) = J(x)e^{-\beta d(x)} + A\left(1 - e^{-\beta d(x)}ight)
 $$
 where $J(x)$ is scene radiance, $\beta$ is the atmospheric extinction coefficient, $d(x)$ is target distance, and $A$ is atmospheric airlight. Dense fog attenuates high-frequency rotor and fuselage edges into the background.
 
@@ -41,16 +41,16 @@ We designed and evaluated three progressively sophisticated neural architectures
 | :--- | :--- | :--- | :--- |
 | **Design Paradigm** | Single-Scale Baseline | Multi-Scale Feature Pyramid | High-Res FPN + Receptive Attention |
 | **Backbone Network** | 4-Stage Plain ConvNet | 4-Stage Residual ConvNet | 4-Stage Residual Backbone ($\text{C}_1$–$\text{C}_4$) |
-| **Multi-Scale Neck** | ❌ None (Single $\text{P}_3$) | ✅ Top-Down FPN ($\text{P}_2, \text{P}_3, \text{P}_4$) | ✅ High-Res FPN with Lateral Convs |
-| **Spatial Strides** | Stride 8 ($80 \times 80$) | Strides 4, 8, 16 | Strides 4, 8, 16 ($160 \times 160, 80 \times 80, 40 \times 40$) |
+| **Multi-Scale Neck** | ❌ None (Single $\text{P}_3$) | ✅ Top-Down FPN $\text{P}_2, \text{P}_3, \text{P}_4$ | ✅ High-Res FPN with Lateral Convs |
+| **Spatial Strides** | Stride 8 $80 \times 80$ | Strides 4, 8, 16 | Strides 4, 8, 16 $160 \times 160, 80 \times 80, 40 \times 40$ |
 | **Spatial Attention** | ❌ None | ❌ None | ✅ Directional Coordinate Attention (CA) |
 | **Contextual Expansion**| ❌ Standard Conv | ❌ Standard Conv | ✅ Receptive Field Block (RFB, $r \in \{1,2,3\}$) |
 | **Head Architecture** | Coupled ConvHead | Shared FPN Heads | Decoupled Classification & Regression Heads |
 | **Anchor Calibration** | 3 anchors at Stride 8 | 9 anchors (3 per scale) | 9 calibrated multi-scale anchors |
-| **Loss Formulation** | Smooth L1 + BCE | CIoU + Focal Loss | Focal ($\gamma=2, \alpha=0.25$) + CIoU + Label-Smooth CE |
-| **Total Parameters** | **1.17M** ($1,173,040$) | **3.87M** ($3,869,456$) | **4.12M** ($4,124,240$) |
-| **FLOPs ($640 \times 640$)**| **12.8 GFLOPs** | **21.6 GFLOPs** | **24.8 GFLOPs** |
-| **Inference Latency** | **186.6 FPS** ($5.36\text{ ms}$) | **80.1 FPS** ($12.48\text{ ms}$) | **74.6 FPS** ($13.40\text{ ms}$) |
+| **Loss Formulation** | Smooth L1 + BCE | CIoU + Focal Loss | Focal $\gamma=2, \alpha=0.25$ + CIoU + Label-Smooth CE |
+| **Total Parameters** | **1.17M** 1.17M $1,173,040$ | **3.87M** 3.87M $3,869,456$ | **4.12M** 4.12M $4,124,240$ |
+| **FLOPs $640 \times 640$**| **12.8 GFLOPs** | **21.6 GFLOPs** | **24.8 GFLOPs** |
+| **Inference Latency** | **186.6 FPS** $5.36\text{ ms}$ | **80.1 FPS** $12.48\text{ ms}$ | **74.6 FPS** $13.40\text{ ms}$ |
 | **Val AP@0.50** | **88.02%** | **92.80%** | **92.38%** |
 | **Precision** | **94.72%** | **96.77%** | **96.32%** (Peak **97.01%**) |
 | **Recall** | **89.20%** | **93.61%** | **93.04%** |
@@ -97,14 +97,14 @@ We designed and evaluated three progressively sophisticated neural architectures
 ```
 
 ### 3.1 High-Resolution Feature Pyramid Network (HR-FPN)
-Standard FPN architectures construct pyramids at strides $\{8, 16, 32\}$ ($\text{P}_3, \text{P}_4, \text{P}_5$). In small drone detection, $\text{P}_5$ contains zero informative signal. We replace $\text{P}_5$ with high-resolution $\text{P}_2$:
+Standard FPN architectures construct pyramids at strides $\{8, 16, 32\}$ $\text{P}_3, \text{P}_4, \text{P}_5$. In small drone detection, $\text{P}_5$ contains zero informative signal. We replace $\text{P}_5$ with high-resolution $\text{P}_2$:
 
-- **$\text{P}_2$ (Stride 4, Resolution $160 \times 160$)**: Dedicated to microscopic drones ($4\text{px} - 24\text{px}$). Preserves rotor edge gradients and landing gear silhouettes.
-- **$\text{P}_3$ (Stride 8, Resolution $80 \times 80$)**: Dedicated to medium-scale drones ($24\text{px} - 64\text{px}$). Balances context and localization precision.
-- **$\text{P}_4$ (Stride 16, Resolution $40 \times 40$)**: Dedicated to close-range UAVs ($> 64\text{px}$). Captures global airframe structure.
+- **$\text{P}_2$ (Stride 4, Resolution $160 \times 160$)**: Dedicated to microscopic drones $4\text{px} - 24\text{px}$. Preserves rotor edge gradients and landing gear silhouettes.
+- **$\text{P}_3$ (Stride 8, Resolution $80 \times 80$)**: Dedicated to medium-scale drones $24\text{px} - 64\text{px}$. Balances context and localization precision.
+- **$\text{P}_4$ (Stride 16, Resolution $40 \times 40$)**: Dedicated to close-range UAVs $> 64\text{px}$. Captures global airframe structure.
 
 ### 3.2 Directional Coordinate Attention (CA)
-Standard Squeeze-and-Excitation (SE) attention performs 2D global spatial average pooling, discarding exact spatial coordinates. **Coordinate Attention** decomposes 2D pooling into two orthogonal 1D spatial pooling operations along the horizontal ($X$) and vertical ($Y$) axes:
+Standard Squeeze-and-Excitation (SE) attention performs 2D global spatial average pooling, discarding exact spatial coordinates. **Coordinate Attention** decomposes 2D pooling into two orthogonal 1D spatial pooling operations along the horizontal $X$ and vertical $Y$ axes:
 
 $$
 \mathbf{z}_c^h(h) = \frac{1}{W} \sum_{i=0}^{W-1} x_c(h, i), \quad \mathbf{z}_c^w(w) = \frac{1}{H} \sum_{j=0}^{H-1} x_c(j, w)
@@ -116,9 +116,9 @@ $$
    $$
    where $\delta$ is the Non-Linear Hard-Swish activation and reduction ratio $r = 16$.
 2. The intermediate tensor $\mathbf{f} \in \mathbb{R}^{C/r \times (H+W)}$ is split back into $\mathbf{f}^h \in \mathbb{R}^{C/r \times H}$ and $\mathbf{f}^w \in \mathbb{R}^{C/r \times W}$.
-3. Two independent $1 \times 1$ convolutions and sigmoid ($\sigma$) activations generate coordinate attention weight maps:
+3. Two independent $1 \times 1$ convolutions and sigmoid $\sigma$ activations generate coordinate attention weight maps:
    $$
-   \mathbf{g}^h = \sigma\left(\text{Conv}_h(\mathbf{f}^h)\right), \quad \mathbf{g}^w = \sigma\left(\text{Conv}_w(\mathbf{f}^w)\right)
+   \mathbf{g}^h = \sigma\left(\text{Conv}_h(\mathbf{f}^h)ight), \quad \mathbf{g}^w = \sigma\left(\text{Conv}_w(\mathbf{f}^w)ight)
    $$
 4. The output feature representation is reweighted along both orthogonal directions:
    $$
@@ -126,7 +126,7 @@ $$
    $$
 
 ### 3.3 Receptive Field Block (RFB)
-The RFB module applies multi-branch dilated convolutions ($r \in \{1, 2, 3\}$) simulating the human visual receptive field:
+The RFB module applies multi-branch dilated convolutions $r \in \{1, 2, 3\}$ simulating the human visual receptive field:
 - **Branch 1**: $1 \times 1\text{ Conv}$ (Identity shortcut)
 - **Branch 2**: $1 \times 1\text{ Conv} \rightarrow 3 \times 3\text{ Conv}$ (Rate $r=1$)
 - **Branch 3**: $1 \times 1\text{ Conv} \rightarrow 3 \times 3\text{ Conv} \rightarrow 3 \times 3\text{ Dilated Conv}$ (Rate $r=2$)
@@ -156,14 +156,14 @@ where calibrated loss weights are $\lambda_{\text{obj}} = 1.2, \lambda_{\text{bo
  Handles 10,000:1 Imbalance      Scale-Invariant Localization     Prevents Overconfidence
 ```
 
-### 4.1 Focal Objectness Loss ($\mathcal{L}_{\text{obj}}$)
+### 4.1 Focal Objectness Loss $\mathcal{L}_{\text{obj}}$
 To prevent overwhelming gradient dominance from $> 10,000$ negative background cells:
 $$
 \mathcal{L}_{\text{obj}} = -\alpha_t (1 - p_t)^\gamma \log(p_t)
 $$
-with focusing exponent $\gamma = 2.0$ and balancing factor $\alpha = 0.25$. Easy background examples ($p_t \approx 1$) generate negligible loss ($(1-p_t)^2 \approx 0$), allowing the network to focus gradient updates on ambiguous drone silhouettes.
+with focusing exponent $\gamma = 2.0$ and balancing factor $\alpha = 0.25$. Easy background examples $p_t \approx 1$ generate negligible loss $(1-p_t)^2 \approx 0$, allowing the network to focus gradient updates on ambiguous drone silhouettes.
 
-### 4.2 Complete Intersection-over-Union Loss ($\mathcal{L}_{\text{box}}$)
+### 4.2 Complete Intersection-over-Union Loss $\mathcal{L}_{\text{box}}$
 Standard MSE/Smooth-L1 losses are scale-dependent, penalizing large bounding boxes disproportionately more than tiny $10 \times 10\text{ px}$ drones. **CIoU Loss** enforces scale invariance across three geometric metrics:
 
 $$
@@ -175,7 +175,7 @@ $$
 v = \frac{4}{\pi^2}\left(\arctan\frac{w^{\text{gt}}}{h^{\text{gt}}} - \arctan\frac{w}{h}\right)^2, \quad \alpha_{\text{ciou}} = \frac{v}{(1 - \text{IoU}) + v}
 $$
 
-### 4.3 Label-Smoothed Classification Loss ($\mathcal{L}_{\text{cls}}$)
+### 4.3 Label-Smoothed Classification Loss $\mathcal{L}_{\text{cls}}$
 To avoid overconfident predictions on hazy, ambiguous drone targets:
 $$
 y_k^{\text{ls}} = (1 - \epsilon) y_k + \frac{\epsilon}{K}, \quad (\epsilon = 0.05, K = 1)
