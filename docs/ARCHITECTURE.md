@@ -35,7 +35,7 @@ We developed three progressively sophisticated neural architectures strictly **f
 | **Loss Formulation** | Smooth L1 + BCE | CIoU + Focal Loss | Focal + CIoU + Label-Smoothed CE |
 | **Parameters** | 1.17M | 3.87M | **4.12M** |
 | **FLOPs (640x640)** | 12.8 GFLOPs | 21.6 GFLOPs | **24.8 GFLOPs** |
-| **Inference (FPS)** | 180.2 FPS | 73.6 FPS | **68.8 FPS** |
+| **Inference (FPS)** | 186.6 FPS | 80.1 FPS | **74.6 FPS** |
 
 ---
 
