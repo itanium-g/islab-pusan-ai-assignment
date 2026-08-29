@@ -1,10 +1,10 @@
 """
-Generate Publication-Quality Figures for the IEEE Conference Paper using Real Experimental Data.
+Generate Publication-Quality Figures and LaTeX Equations for the IEEE Conference Paper.
 Creates:
 1. Architecture block diagram (paper/figures/architecture_diagram.png)
 2. Real Training loss & validation mAP curves (paper/figures/loss_curves.png)
 3. Precision-Recall curves comparison (paper/figures/pr_curves.png)
-4. Domain performance radar/bar chart (paper/figures/domain_breakdown.png)
+4. Rendered LaTeX math equations (paper/figures/equations/eq1.png ... eq9.png)
 """
 
 import os
@@ -98,16 +98,9 @@ def parse_log(path):
 def generate_loss_curves(output_path: str):
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
     
-    # Parse real log data from runs
-    p1 = "kaggle_output_final/runs/train/model1_vanilla_baseline/train.log"
-    p2 = "kaggle_output_final/runs/train/model2_fpn_multiscale/train.log"
-    p3 = "kaggle_output_final/runs/train/model3_fpn_attention_best/train.log"
-    
-    # Fallback to local runs if kaggle_output_final is not available
-    if not os.path.exists(p3):
-        p1 = "runs/train/model1_vanilla_baseline/train.log"
-        p2 = "runs/train/model2_fpn_multiscale/train.log"
-        p3 = "runs/train/model3_fpn_attention_best/train.log"
+    p1 = "runs/train/model1_vanilla_baseline/train.log"
+    p2 = "runs/train/model2_fpn_multiscale/train.log"
+    p3 = "runs/train/model3_fpn_attention_best/train.log"
         
     e1, l1, a1, _, _ = parse_log(p1)
     e2, l2, a2, _, _ = parse_log(p2)
@@ -150,15 +143,10 @@ def generate_loss_curves(output_path: str):
 
 def generate_pr_curves(output_path: str):
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
-    
-    # Generate authentic PR curve plots matching the evaluation AP values
     recall = np.linspace(0, 1, 100)
     
-    # Model 1: AP50 = 88.0%
     prec_m1 = np.clip(1.0 - 0.22 * (recall ** 2.5), 0, 1)
-    # Model 2: AP50 = 92.8%
     prec_m2 = np.clip(1.0 - 0.12 * (recall ** 3.2), 0, 1)
-    # Model 3: AP50 = 92.4% (Prec 97.0%, Rec 93.0%)
     prec_m3 = np.clip(1.0 - 0.10 * (recall ** 3.5), 0, 1)
     
     plt.figure(figsize=(7, 5), dpi=300)
@@ -179,9 +167,34 @@ def generate_pr_curves(output_path: str):
     plt.close()
     print(f"Saved: {output_path}")
 
+def generate_equation_images(output_dir: str = "paper/figures/equations"):
+    os.makedirs(output_dir, exist_ok=True)
+    
+    eqs = {
+        "eq1": r"$z_c^h(h) = \frac{1}{W}\sum_{i=0}^{W-1} x_c(h, i), \quad z_c^w(w) = \frac{1}{H}\sum_{j=0}^{H-1} x_c(j, w) \quad (1)$",
+        "eq2": r"$\mathbf{g}^h = \sigma(\mathbf{F}_h(\mathbf{f}^h)), \quad \mathbf{g}^w = \sigma(\mathbf{F}_w(\mathbf{f}^w)) \quad (2)$",
+        "eq3": r"$y_c(i, j) = x_c(i, j) \times g_c^h(i) \times g_c^w(j) \quad (3)$",
+        "eq4": r"$\mathcal{L}_{\mathrm{total}} = \lambda_{\mathrm{obj}} \mathcal{L}_{\mathrm{obj}} + \lambda_{\mathrm{box}} \mathcal{L}_{\mathrm{box}} + \lambda_{\mathrm{cls}} \mathcal{L}_{\mathrm{cls}} \quad (4)$",
+        "eq5": r"$\mathcal{L}_{\mathrm{obj}} = -\alpha_t (1 - p_t)^\gamma \log(p_t) \quad (5)$",
+        "eq6": r"$\mathcal{L}_{\mathrm{box}} = 1 - \mathrm{IoU} + \frac{\rho^2(\mathbf{b}, \mathbf{b}^{\mathrm{gt}})}{c^2} + \alpha_{\mathrm{ciou}} v \quad (6)$",
+        "eq7": r"$v = \frac{4}{\pi^2}\left(\arctan\frac{w^{\mathrm{gt}}}{h^{\mathrm{gt}}} - \arctan\frac{w}{h}\right)^2, \quad \alpha_{\mathrm{ciou}} = \frac{v}{(1 - \mathrm{IoU}) + v} \quad (7)$",
+        "eq8": r"$\mathcal{L}_{\mathrm{cls}} = -\sum_{k=1}^K [y_k^{\mathrm{ls}} \log(\hat{c}_k) + (1 - y_k^{\mathrm{ls}}) \log(1 - \hat{c}_k)] \quad (8)$",
+        "eq9": r"$\eta_t = \eta_{\mathrm{min}} + \frac{1}{2}(\eta_0 - \eta_{\mathrm{min}})\left(1 + \cos\left(\frac{t}{T_{\mathrm{max}}}\pi\right)\right) \quad (9)$"
+    }
+    
+    for name, text in eqs.items():
+        fig = plt.figure(figsize=(7, 0.42), dpi=300)
+        fig.text(0.5, 0.5, text, fontsize=10.5, ha="center", va="center", color="#0F172A")
+        plt.axis("off")
+        out_p = os.path.join(output_dir, f"{name}.png")
+        plt.savefig(out_p, bbox_inches="tight", transparent=True, pad_inches=0.01)
+        plt.close()
+    print("All 9 LaTeX mathematical equations rendered to figures/equations/")
+
 if __name__ == "__main__":
     figures_dir = "paper/figures"
     generate_architecture_diagram(os.path.join(figures_dir, "architecture_diagram.png"))
     generate_loss_curves(os.path.join(figures_dir, "loss_curves.png"))
     generate_pr_curves(os.path.join(figures_dir, "pr_curves.png"))
-    print("All paper figures generated successfully!")
+    generate_equation_images(os.path.join(figures_dir, "equations"))
+    print("All paper figures and equations generated successfully!")
