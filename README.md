@@ -1,7 +1,8 @@
 # 🛸 DroneNet-FPN-Attention: A Lightweight Multi-Scale Receptive-Field Attention Network for Scratch UAV Detection Under Adverse Atmospheric Conditions
 
-[![Author](https://img.shields.io/badge/Author-Ghiffari_Ahmadijaya-blue.svg)](https://github.com/itanium)
-[![Role](https://img.shields.io/badge/Role-AI_Engineer_Researcher-indigo.svg)](https://github.com/itanium)
+[![Author](https://img.shields.io/badge/Author-Ghiffari_Ahmadijaya-blue.svg)](https://github.com/itanium-g)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white)](https://github.com/itanium-g/islab-pusan-ai-assignment)
+[![Role](https://img.shields.io/badge/Role-AI_Engineer_Researcher-indigo.svg)](https://github.com/itanium-g)
 [![Python 3.14](https://img.shields.io/badge/Python-3.14-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch 2.13](https://img.shields.io/badge/PyTorch-2.13-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Git LFS](https://img.shields.io/badge/Git_LFS-Enabled-orange?logo=git-lfs&logoColor=white)](https://git-lfs.github.com/)
@@ -14,6 +15,7 @@
 
 > **ISLab Pusan National University — AI Engineer / Researcher Role Assignment**  
 > **Author**: **Ghiffari Ahmadijaya** (`ghiffariahmadijaya@gmail.com`)  
+> **Repository**: [https://github.com/itanium-g/islab-pusan-ai-assignment](https://github.com/itanium-g/islab-pusan-ai-assignment)  
 > An end-to-end vanilla deep learning object detection and classification system for small Unmanned Aerial Vehicles (UAVs), engineered strictly **from scratch without pretrained weights** and optimized for severe atmospheric domain shifts (dense fog, atmospheric scattering, and harsh specular solar glare).
 
 ---

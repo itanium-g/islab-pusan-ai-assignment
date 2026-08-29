@@ -75,7 +75,7 @@ Place `kaggle.json` inside `~/.kaggle/kaggle.json` (or `C:\Users\<USER>\.kaggle\
 
 ### 4.2 Push & Execute
 ```powershell
-# Rebuild the standalone self-contained notebook
+# Rebuild the standalone notebook
 python scripts/build_kaggle_notebook.py
 
 # Push and launch execution on Kaggle
